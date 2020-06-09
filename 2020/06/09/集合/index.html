@@ -3,19 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>tags | CodeApe</title>
+  <title>集合 | CodeApe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="df" />
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="目录1.集合的引入和ArrayList 集合和数组的比较   面试题：数组和集合的联系与区别 联系： 两者都可以存储基本数据类型和引用数据类型； 区别：  数组长度必须指定初始化，且长度固定 ； 数组采用连续存储空间，删除和添加效率低下； 数组无法直接保存映射关系；    集合框架  位于Java.util包中；  List的主要实现类  2.ArrayList和LinkedListSet3.集合">
+<meta property="og:type" content="article">
+<meta property="og:title" content="集合">
+<meta property="og:url" content="http://yoursite.com/2020/06/09/%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="CodeApe">
+<meta property="og:description" content="目录1.集合的引入和ArrayList 集合和数组的比较   面试题：数组和集合的联系与区别 联系： 两者都可以存储基本数据类型和引用数据类型； 区别：  数组长度必须指定初始化，且长度固定 ； 数组采用连续存储空间，删除和添加效率低下； 数组无法直接保存映射关系；    集合框架  位于Java.util包中；  List的主要实现类  2.ArrayList和LinkedListSet3.集合">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-08T18:18:22.000Z">
-<meta property="article:modified_time" content="2020-06-08T18:19:26.229Z">
+<meta property="article:published_time" content="2020-06-09T06:48:12.705Z">
+<meta property="article:modified_time" content="2020-06-09T07:53:37.390Z">
 <meta property="article:author" content="Steve Zhang">
+<meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
   
   
@@ -108,14 +111,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-集合" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      tags
+      集合
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -134,14 +137,35 @@
           
       </header>
     
-    <div class="article-entry " itemprop="articleBody">
+    <div class="article-entry post-content" itemprop="articleBody">
       
             
-            
+            <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><h5 id="1-集合的引入和ArrayList"><a href="#1-集合的引入和ArrayList" class="headerlink" title="1.集合的引入和ArrayList"></a>1.集合的引入和ArrayList</h5><ul>
+<li><h5 id="集合和数组的比较"><a href="#集合和数组的比较" class="headerlink" title="集合和数组的比较"></a>集合和数组的比较</h5></li>
+</ul>
+<blockquote>
+<p><strong>面试题</strong>：数组和集合的联系与区别</p>
+<p>联系：</p>
+<p>两者都可以存储基本数据类型和引用数据类型；</p>
+<p>区别：</p>
+<ol>
+<li>数组长度必须指定初始化，且长度固定 ；</li>
+<li>数组采用连续存储空间，删除和添加效率低下；</li>
+<li>数组无法直接保存映射关系；</li>
+</ol>
+</blockquote>
+<ul>
+<li><h5 id="集合框架"><a href="#集合框架" class="headerlink" title="集合框架"></a>集合框架</h5></li>
+</ul>
+<p>位于Java.util包中；</p>
+<ul>
+<li><h5 id="List的主要实现类"><a href="#List的主要实现类" class="headerlink" title="List的主要实现类"></a>List的主要实现类</h5></li>
+</ul>
+<h5 id="2-ArrayList和LinkedListSet"><a href="#2-ArrayList和LinkedListSet" class="headerlink" title="2.ArrayList和LinkedListSet"></a>2.ArrayList和LinkedListSet</h5><h5 id="3-集合的使用"><a href="#3-集合的使用" class="headerlink" title="3.集合的使用"></a>3.集合的使用</h5><h5 id="4-Set集合的原理"><a href="#4-Set集合的原理" class="headerlink" title="4.Set集合的原理"></a>4.Set集合的原理</h5><h5 id="5-Map集合的使用"><a href="#5-Map集合的使用" class="headerlink" title="5.Map集合的使用"></a>5.Map集合的使用</h5><h5 id="6-Map和Set集合源码"><a href="#6-Map和Set集合源码" class="headerlink" title="6.Map和Set集合源码"></a>6.Map和Set集合源码</h5><h5 id="7-集合的其他内容"><a href="#7-集合的其他内容" class="headerlink" title="7.集合的其他内容"></a>7.集合的其他内容</h5><h5 id="8-泛型"><a href="#8-泛型" class="headerlink" title="8.泛型"></a>8.泛型</h5><h5 id="9-JDK8新特征"><a href="#9-JDK8新特征" class="headerlink" title="9.JDK8新特征"></a>9.JDK8新特征</h5>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2020年06月09日 02:19</p>
-        <p>原始链接： <a class="post-url" href="/tags/index.html" title="tags">http://yoursite.com/tags/index.html</a></p>
+        <p>最后更新： 2020年06月09日 15:53</p>
+        <p>原始链接： <a class="post-url" href="/2020/06/09/%E9%9B%86%E5%90%88/" title="集合">http://yoursite.com/2020/06/09/%E9%9B%86%E5%90%88/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/images/%E5%A4%B4%E5%83%8F.png" alt="Steve Zhang">
@@ -198,7 +222,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/tags/&title=《tags》 — CodeApe&pic=http://yoursite.comimages/头像.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/09/%E9%9B%86%E5%90%88/&title=《集合》 — CodeApe&pic=http://yoursite.comimages/头像.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -208,22 +232,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/tags/&title=《tags》 — CodeApe&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/09/%E9%9B%86%E5%90%88/&title=《集合》 — CodeApe&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/tags/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/09/%E9%9B%86%E5%90%88/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《tags》 — CodeApe&url=http://yoursite.com/tags/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《集合》 — CodeApe&url=http://yoursite.com/2020/06/09/%E9%9B%86%E5%90%88/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/tags/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/09/%E9%9B%86%E5%90%88/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -233,7 +257,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/tags/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/06/09/%E9%9B%86%E5%90%88/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -242,6 +266,13 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaSE/" class="color2">JavaSE</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -249,11 +280,27 @@
 </article>
 
 
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#目录"><span class="post-toc-text">目录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-集合的引入和ArrayList"><span class="post-toc-text">1.集合的引入和ArrayList</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#集合和数组的比较"><span class="post-toc-text">集合和数组的比较</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#集合框架"><span class="post-toc-text">集合框架</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#List的主要实现类"><span class="post-toc-text">List的主要实现类</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-ArrayList和LinkedListSet"><span class="post-toc-text">2.ArrayList和LinkedListSet</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-集合的使用"><span class="post-toc-text">3.集合的使用</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-Set集合的原理"><span class="post-toc-text">4.Set集合的原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#5-Map集合的使用"><span class="post-toc-text">5.Map集合的使用</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#6-Map和Set集合源码"><span class="post-toc-text">6.Map和Set集合源码</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#7-集合的其他内容"><span class="post-toc-text">7.集合的其他内容</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#8-泛型"><span class="post-toc-text">8.泛型</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#9-JDK8新特征"><span class="post-toc-text">9.JDK8新特征</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Lambda表达式详解</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
 
 
 
     
-        <div id="SOHUCS" sid="" ></div>
+        <div id="SOHUCS" sid="集合" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'true';
