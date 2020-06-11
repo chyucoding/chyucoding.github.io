@@ -8,18 +8,20 @@
   
     <meta name="keywords" content="df" />
   
-  <meta name="description" content="目录1.集合的引入和ArrayList 集合和数组的比较   面试题：数组和集合的联系与区别 联系： 两者都可以存储基本数据类型和引用数据类型； 区别：  数组长度必须指定初始化，且长度固定 ； 数组采用连续存储空间，删除和添加效率低下； 数组无法直接保存映射关系；    集合框架  位于Java.util包中；  List的主要实现类  2.ArrayList和LinkedListSet3.集合">
+  <meta name="description" content="目录1.集合的引入和ArrayList 集合和数组的比较   面试题：数组和集合的联系与区别 联系： 两者都可以存储基本数据类型和引用数据类型； 区别：  数组长度必须指定初始化，且长度固定 ； 数组采用连续存储空间，删除和添加效率低下； 数组无法直接保存映射关系；    集合框架  位于Java.util包中； 结构：  List的主要实现类  List特征：有序，不唯一 ArrayList：分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="集合">
 <meta property="og:url" content="http://yoursite.com/2020/06/09/%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="CodeApe">
-<meta property="og:description" content="目录1.集合的引入和ArrayList 集合和数组的比较   面试题：数组和集合的联系与区别 联系： 两者都可以存储基本数据类型和引用数据类型； 区别：  数组长度必须指定初始化，且长度固定 ； 数组采用连续存储空间，删除和添加效率低下； 数组无法直接保存映射关系；    集合框架  位于Java.util包中；  List的主要实现类  2.ArrayList和LinkedListSet3.集合">
+<meta property="og:description" content="目录1.集合的引入和ArrayList 集合和数组的比较   面试题：数组和集合的联系与区别 联系： 两者都可以存储基本数据类型和引用数据类型； 区别：  数组长度必须指定初始化，且长度固定 ； 数组采用连续存储空间，删除和添加效率低下； 数组无法直接保存映射关系；    集合框架  位于Java.util包中； 结构：  List的主要实现类  List特征：有序，不唯一 ArrayList：分">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/.com//D:%5Chexo%5Csource_posts%5C%E9%9B%86%E5%90%88%5C%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF.jpg">
 <meta property="article:published_time" content="2020-06-09T06:48:12.705Z">
-<meta property="article:modified_time" content="2020-06-09T07:53:37.390Z">
+<meta property="article:modified_time" content="2020-06-11T04:48:39.788Z">
 <meta property="article:author" content="Steve Zhang">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/.com//D:%5Chexo%5Csource_posts%5C%E9%9B%86%E5%90%88%5C%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF.jpg">
   
   
     <link rel="icon" href="images/favicon.ico">
@@ -158,13 +160,77 @@
 <li><h5 id="集合框架"><a href="#集合框架" class="headerlink" title="集合框架"></a>集合框架</h5></li>
 </ul>
 <p>位于Java.util包中；</p>
+<p>结构：</p>
 <ul>
 <li><h5 id="List的主要实现类"><a href="#List的主要实现类" class="headerlink" title="List的主要实现类"></a>List的主要实现类</h5></li>
 </ul>
-<h5 id="2-ArrayList和LinkedListSet"><a href="#2-ArrayList和LinkedListSet" class="headerlink" title="2.ArrayList和LinkedListSet"></a>2.ArrayList和LinkedListSet</h5><h5 id="3-集合的使用"><a href="#3-集合的使用" class="headerlink" title="3.集合的使用"></a>3.集合的使用</h5><h5 id="4-Set集合的原理"><a href="#4-Set集合的原理" class="headerlink" title="4.Set集合的原理"></a>4.Set集合的原理</h5><h5 id="5-Map集合的使用"><a href="#5-Map集合的使用" class="headerlink" title="5.Map集合的使用"></a>5.Map集合的使用</h5><h5 id="6-Map和Set集合源码"><a href="#6-Map和Set集合源码" class="headerlink" title="6.Map和Set集合源码"></a>6.Map和Set集合源码</h5><h5 id="7-集合的其他内容"><a href="#7-集合的其他内容" class="headerlink" title="7.集合的其他内容"></a>7.集合的其他内容</h5><h5 id="8-泛型"><a href="#8-泛型" class="headerlink" title="8.泛型"></a>8.泛型</h5><h5 id="9-JDK8新特征"><a href="#9-JDK8新特征" class="headerlink" title="9.JDK8新特征"></a>9.JDK8新特征</h5>
+<p>List特征：有序，不唯一</p>
+<p>ArrayList：分配连续空间，实现长度可变的数组</p>
+<p>LinkedList：采用双向链表的存储方式</p>
+<h5 id="2-ArrayList和LinkedListSet"><a href="#2-ArrayList和LinkedListSet" class="headerlink" title="2.ArrayList和LinkedListSet"></a>2.ArrayList和LinkedListSet</h5><table>
+<thead>
+<tr>
+<th align="center">实现类</th>
+<th align="center">ArrayList</th>
+<th align="center">LinkedList</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">优点</td>
+<td align="center">查询、遍历效率高（按照索引）</td>
+<td align="center">增加删除效率高</td>
+</tr>
+<tr>
+<td align="center">缺点</td>
+<td align="center">增加、删除效率低、按照内容查询效率低</td>
+<td align="center">查询、遍历效率低</td>
+</tr>
+</tbody></table>
+<h5 id="3-集合的使用"><a href="#3-集合的使用" class="headerlink" title="3.集合的使用"></a>3.集合的使用</h5><p><strong>遍历集合</strong></p>
+<ul>
+<li>使用普通for循环</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> List&lt;Integer&gt;();</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        System.out.println(list.size());</span><br><span class="line">        <span class="comment">//使用普通for循环</span></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;list.size;i++)&#123;</span><br><span class="line">            System.out.println(list.get(i));</span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>使用foreach循环</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test2</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> List&lt;Integer&gt;();</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        System.out.println(list.size());</span><br><span class="line">        <span class="comment">//使用foreach</span></span><br><span class="line">        <span class="keyword">for</span>(Integer num:list)&#123;</span><br><span class="line">            System.out.println(num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>使用Iterator迭代器</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test3</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> List&lt;Integer&gt;();</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        System.out.println(list.size());</span><br><span class="line">        <span class="comment">//使用迭代器</span></span><br><span class="line">        Itarator&lt;Integet&gt; it = list.itarator();</span><br><span class="line">        <span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">             System.out.println(it.next());</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>使用lambda表达式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test4</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> List&lt;Integer&gt;();</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        System.out.println(list.size());</span><br><span class="line">        <span class="comment">//使用lambda表达式</span></span><br><span class="line">       list.foreach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>其他常见方法</strong></p>
+<p>add(index，元素)    指定位置添加</p>
+<p>addAll(新的集合)    将新的集合添加到原集合的后边</p>
+<p>remove(index)    删除指定元素</p>
+<p>removeAll(集合)    删除集合</p>
+<p>contains(Object o)     如果列表包含指定的元素，则返回 true</p>
+<p>isEmpty()    是否为空</p>
+<p>get（index）获取指定元素</p>
+<p>size（）获取集合中元素的个数</p>
+<blockquote>
+<p>LinkedList集合与ArrayList集合方法类似，在此不进行赘述，但是需要注意：</p>
+<p>1.大量的根据索引<strong>查询</strong>的操作，大量的<strong>遍历</strong>操作（按照索引0–n-1逐个查询一般），建议使用<strong>ArrayList</strong>;<br>2.如果存在较多的<strong>添加、删除操作</strong>，建议使用<strong>LinkedList</strong>;</p>
+</blockquote>
+<p><img src="/.com//D:%5Chexo%5Csource_posts%5C%E9%9B%86%E5%90%88%5C%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF.jpg" alt="乔布斯"></p>
+<h5 id="4-Set集合的原理"><a href="#4-Set集合的原理" class="headerlink" title="4.Set集合的原理"></a>4.Set集合的原理</h5><h5 id="5-Map集合的使用"><a href="#5-Map集合的使用" class="headerlink" title="5.Map集合的使用"></a>5.Map集合的使用</h5><h5 id="6-Map和Set集合源码"><a href="#6-Map和Set集合源码" class="headerlink" title="6.Map和Set集合源码"></a>6.Map和Set集合源码</h5><h5 id="7-集合的其他内容"><a href="#7-集合的其他内容" class="headerlink" title="7.集合的其他内容"></a>7.集合的其他内容</h5><h5 id="8-泛型"><a href="#8-泛型" class="headerlink" title="8.泛型"></a>8.泛型</h5><h5 id="9-JDK8新特征"><a href="#9-JDK8新特征" class="headerlink" title="9.JDK8新特征"></a>9.JDK8新特征</h5>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2020年06月09日 15:53</p>
+        <p>最后更新： 2020年06月11日 12:48</p>
         <p>原始链接： <a class="post-url" href="/2020/06/09/%E9%9B%86%E5%90%88/" title="集合">http://yoursite.com/2020/06/09/%E9%9B%86%E5%90%88/</a></p>
         <footer>
             <a href="http://yoursite.com">
