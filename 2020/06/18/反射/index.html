@@ -3,17 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | CodeApe</title>
+  <title>详解Java反射机制 | CodeApe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="df" />
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CodeApe">
-<meta property="og:url" content="https://chyucoding.github.io/archives/index.html">
+  <meta name="description" content="前言 Java反射机制：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="详解Java反射机制">
+<meta property="og:url" content="https://chyucoding.github.io/2020/06/18/%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="CodeApe">
+<meta property="og:description" content="前言 Java反射机制：">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-18T10:39:40.000Z">
+<meta property="article:modified_time" content="2020-06-18T10:54:14.108Z">
 <meta property="article:author" content="Steve Zhang">
+<meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
   
   
@@ -106,35 +111,149 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap">
-  
-  
+        <section id="main" class="body-wrap"><article id="post-反射" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/06/18/%E5%8F%8D%E5%B0%84/" class="archive-article-date">
-  <time datetime="2020-06-18T10:39:40.000Z" itemprop="datePublished">06-18</time>
-</a>
-      
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/18/%E5%8F%8D%E5%B0%84/"  >详解Java反射机制</a>
+    <h1 class="post-title" itemprop="name">
+      详解Java反射机制
     </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Java/">Java</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2020-06-18
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
   
 
-    </header>
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
       
-        <div class="archive-post-footer">
+            
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>Java反射机制：</p>
+</blockquote>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2020年06月18日 18:54</p>
+        <p>原始链接： <a class="post-url" href="/2020/06/18/%E5%8F%8D%E5%B0%84/" title="详解Java反射机制">https://chyucoding.github.io/2020/06/18/%E5%8F%8D%E5%B0%84/</a></p>
+        <footer>
+            <a href="https://chyucoding.github.io">
+                <img src="/images/%E5%A4%B4%E5%83%8F.png" alt="Steve Zhang">
+                Steve Zhang
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        感谢大家
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://chyucoding.github.io/2020/06/18/%E5%8F%8D%E5%B0%84/&title=《详解Java反射机制》 — CodeApe&pic=/images/Java反射.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chyucoding.github.io/2020/06/18/%E5%8F%8D%E5%B0%84/&title=《详解Java反射机制》 — CodeApe&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://chyucoding.github.io/2020/06/18/%E5%8F%8D%E5%B0%84/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《详解Java反射机制》 — CodeApe&url=https://chyucoding.github.io/2020/06/18/%E5%8F%8D%E5%B0%84/&via=https://chyucoding.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://chyucoding.github.io/2020/06/18/%E5%8F%8D%E5%B0%84/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://chyucoding.github.io/2020/06/18/%E5%8F%8D%E5%B0%84/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
             
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
@@ -143,261 +262,42 @@
       
   </li>
 
-        </div>
-      
+        </ul>
+        
+    </footer>
   </div>
 </article>
 
-  
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前言"><span class="post-toc-text">前言</span></a></li></ol>
+        </nav>
+    </aside>
     
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/18/%E7%A7%92%E6%87%82java%E9%9B%86%E5%90%88Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">详解Iterator迭代器</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/06/18/%E7%A7%92%E6%87%82java%E9%9B%86%E5%90%88Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8/" class="archive-article-date">
-  <time datetime="2020-06-17T23:59:40.000Z" itemprop="datePublished">06-18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/18/%E7%A7%92%E6%87%82java%E9%9B%86%E5%90%88Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8/"  >详解Iterator迭代器</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaSE/" class="color2">JavaSE</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
+        <div id="SOHUCS" sid="反射" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'true';
+        var conf = 'true';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/06/16/2020-06-16%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  <time datetime="2020-06-16T14:45:40.000Z" itemprop="datePublished">06-16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/16/2020-06-16%E6%80%BB%E7%BB%93/"  >突发灵感，收获满满</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/灵感/" class="color3">灵感</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/06/13/JavaSE%E6%AD%A3%E5%BC%8F%E7%8F%AD%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  <time datetime="2020-06-13T04:05:29.335Z" itemprop="datePublished">06-13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/13/JavaSE%E6%AD%A3%E5%BC%8F%E7%8F%AD%E6%80%BB%E7%BB%93/"  >JavaSE正式班总结</a>
-    </h1>
-  
-
-    </header>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/" class="archive-article-date">
-  <time datetime="2020-06-12T15:01:00.000Z" itemprop="datePublished">06-12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/"  >多线程与高并发</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaSE/" class="color2">JavaSE</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/06/11/JavaSE_IO%E6%B5%81/" class="archive-article-date">
-  <time datetime="2020-06-11T13:03:00.000Z" itemprop="datePublished">06-11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/11/JavaSE_IO%E6%B5%81/"  >IO流</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaSE/" class="color2">JavaSE</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/06/10/final%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
-  <time datetime="2020-06-10T05:26:40.000Z" itemprop="datePublished">06-10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/10/final%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E8%AF%A6%E8%A7%A3/"  >final关键字的详解</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaSE/" class="color2">JavaSE</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/06/09/%E9%9B%86%E5%90%88/" class="archive-article-date">
-  <time datetime="2020-06-09T06:48:12.705Z" itemprop="datePublished">06-09</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/09/%E9%9B%86%E5%90%88/"  >集合</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaSE/" class="color2">JavaSE</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
-  <time datetime="2020-06-08T16:38:40.000Z" itemprop="datePublished">06-09</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/"  >Lambda表达式详解</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaSE/" class="color2">JavaSE</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-  
-    </div></section>
-  
-
 </section>
         
       </div>
