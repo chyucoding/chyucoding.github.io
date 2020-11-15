@@ -14,22 +14,20 @@
     
     
     
-    <title>About | Steve&#39;s Blog | Stay hungry，Stay foolish</title>
+    <title>JVM性能优化策略 | Steve&#39;s Blog | Stay hungry，Stay foolish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#d39f7a">
     
     
     <meta name="keywords" content="">
-    <meta name="description" content="关于我一枚忠实的田径粉丝，喜欢K歌，酷爱编程开发，希望通过代码改变世界； 关于工作城市：北京 关于学习正在往终身学习者前进…近期学习方向：Java 关于座右铭 Stay hungry，Stay foolish                    –Steve Jobs   关于爱好热爱运动，尤其喜爱田径运动、K歌、Coding、DIY手作； 联系我 QQ：1565881540 Wechat：18">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="https://chyucoding.github.io/about/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="JVM性能优化策略">
+<meta property="og:url" content="https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/index.html">
 <meta property="og:site_name" content="Steve&#39;s Blog">
-<meta property="og:description" content="关于我一枚忠实的田径粉丝，喜欢K歌，酷爱编程开发，希望通过代码改变世界； 关于工作城市：北京 关于学习正在往终身学习者前进…近期学习方向：Java 关于座右铭 Stay hungry，Stay foolish                    –Steve Jobs   关于爱好热爱运动，尤其喜爱田径运动、K歌、Coding、DIY手作； 联系我 QQ：1565881540 Wechat：18">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-08T17:55:30.000Z">
-<meta property="article:modified_time" content="2020-06-08T18:12:39.287Z">
+<meta property="article:published_time" content="2020-11-15T09:49:35.850Z">
+<meta property="article:modified_time" content="2020-11-15T09:49:35.850Z">
 <meta property="article:author" content="Steve Zhang">
 <meta name="twitter:card" content="summary">
     
@@ -110,7 +108,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">About</div>
+        <div class="flex-col header-title ellipsis">JVM性能优化策略</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -129,11 +127,17 @@
         
     </div>
 </header>
-<header class="content-header page-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">About</h1>
+        <h1 class="title">JVM性能优化策略</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2020-11-15T09:49:35.850Z" itemprop="datePublished" class="page-time">
+  2020-11-15
+</time>
+
+
             
         </h5>
     </div>
@@ -145,32 +149,61 @@
 
 
 <div class="container body-wrap">
-    <article class="page-article fade" itemprop="blogPage">
-        <div class="post-content page-content" id="page-content" itemprop="pageContent">
-            <h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p>一枚<code>忠实的田径粉丝</code>，喜欢<code>K歌</code>，酷爱<code>编程开发</code>，希望通过代码改变世界；</p>
-<h3 id="关于工作"><a href="#关于工作" class="headerlink" title="关于工作"></a>关于工作</h3><p>城市：<code>北京</code></p>
-<h3 id="关于学习"><a href="#关于学习" class="headerlink" title="关于学习"></a>关于学习</h3><p>正在往终身学习者前进…<br>近期学习方向：Java</p>
-<h3 id="关于座右铭"><a href="#关于座右铭" class="headerlink" title="关于座右铭"></a>关于座右铭</h3><blockquote>
-<p>Stay hungry，Stay foolish<br>                    –Steve Jobs </p>
-</blockquote>
-<h3 id="关于爱好"><a href="#关于爱好" class="headerlink" title="关于爱好"></a>关于爱好</h3><p>热爱<code>运动</code>，尤其喜爱<code>田径运动</code>、<code>K歌</code>、<code>Coding</code>、<code>DIY手作</code>；</p>
-<h3 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h3><ul>
-<li>QQ：1565881540</li>
-<li>Wechat：18764665609</li>
-<li>Email: <a href="mailto:1876465609@163.com">1876465609@163.com</a></li>
-<li>GitHub: <a href="https://github.com/chyucoding/chyucoding.github.io" target="_blank" rel="noopener">chyucoding</a></li>
-</ul>
+    
+
+<article id="post-JVM性能优化策略"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JVM性能优化策略</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-11-15 17:49:35" datetime="2020-11-15T09:49:35.850Z"  itemprop="datePublished">2020-11-15</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
 
         </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-11-15T09:49:35.850Z" itemprop="dateUpdated">2020-11-15 17:49:35</time>
+</span><br>
+
 
         
-        <div class="card page-about-me flex-row">
-            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/%E5%A4%B4%E5%83%8F.jpg"></a>
-            <div class="content flex-col">
-                <p><strong>Steve Zhang</strong></p>
-                <p><em>Stay hungry，Stay foolish</em></p>
-                <p>一个田径热Fun，热爱编程开发，希望通过代码改变世界...</p>
-            </div>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/" target="_blank" rel="external">https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://chyucoding.github.io">
+            <img src="/img/%E5%A4%B4%E5%83%8F.jpg" alt="Steve Zhang">
+            Steve Zhang
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
 
             
 <div class="page-share-wrap">
@@ -179,7 +212,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://chyucoding.github.io/about/&title=《About》 — Steve's Blog&pic=https://chyucoding.github.io/img/头像.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/&title=《JVM性能优化策略》 — Steve's Blog&pic=https://chyucoding.github.io/img/头像.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -189,22 +222,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chyucoding.github.io/about/&title=《About》 — Steve's Blog&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/&title=《JVM性能优化策略》 — Steve's Blog&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://chyucoding.github.io/about/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《About》 — Steve's Blog&url=https://chyucoding.github.io/about/&via=https://chyucoding.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JVM性能优化策略》 — Steve's Blog&url=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/&via=https://chyucoding.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://chyucoding.github.io/about/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -221,38 +254,54 @@
 
 
         </div>
-        
+    </div>
 
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </article>
     
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/11/15/Tomcat%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Tomcat性能优化策略</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/11/11/%E4%BD%BF%E7%94%A8Java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">使用Java实现一个简单（前序 中序 后序）二叉树</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
 <div id="reward" class="page-modal reward-lay">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
@@ -278,6 +327,7 @@
         
     </div>
 </div>
+
 
 
 </div>
@@ -321,7 +371,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://chyucoding.github.io/about/&title=《About》 — Steve's Blog&pic=https://chyucoding.github.io/img/头像.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/&title=《JVM性能优化策略》 — Steve's Blog&pic=https://chyucoding.github.io/img/头像.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -331,22 +381,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chyucoding.github.io/about/&title=《About》 — Steve's Blog&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/&title=《JVM性能优化策略》 — Steve's Blog&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://chyucoding.github.io/about/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《About》 — Steve's Blog&url=https://chyucoding.github.io/about/&via=https://chyucoding.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JVM性能优化策略》 — Steve's Blog&url=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/&via=https://chyucoding.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://chyucoding.github.io/about/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -357,7 +407,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://chyucoding.github.io/about/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://chyucoding.github.io/2020/11/15/JVM%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5/" alt="微信分享二维码">
 </div>
 
 

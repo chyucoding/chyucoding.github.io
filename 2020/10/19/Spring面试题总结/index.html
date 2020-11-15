@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Spring面试题总结 | Steve&#39;s Blog | Stay hungry，Stay foolish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#d39f7a">
+    
+    
+    <meta name="keywords" content="Spring">
+    <meta name="description" content="Spring面试题总结：1. 什么是Spring框架？Spring（Spring FrameWork）是一种轻量级的开发框架，可以提高开发人员的开发效率以及系统的维护性，它是很多模块的集合，使用这些模块可以很方便的进行开发； 模块：  核心容器 数据访问&#x2F;集成 WebkAOP（面向切面编程） 工具 消息 测试模块  2.列举几个重要的Spring模块？  Spring Core： 基础模块，Spr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring面试题总结">
+<meta property="og:url" content="https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Steve&#39;s Blog">
+<meta property="og:description" content="Spring面试题总结：1. 什么是Spring框架？Spring（Spring FrameWork）是一种轻量级的开发框架，可以提高开发人员的开发效率以及系统的维护性，它是很多模块的集合，使用这些模块可以很方便的进行开发； 模块：  核心容器 数据访问&#x2F;集成 WebkAOP（面向切面编程） 工具 消息 测试模块  2.列举几个重要的Spring模块？  Spring Core： 基础模块，Spr">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/11/05/BRYbOU.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/11/06/Bhwk34.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/11/09/BbFFW6.png">
+<meta property="article:published_time" content="2020-10-19T14:10:26.000Z">
+<meta property="article:modified_time" content="2020-11-11T09:15:02.663Z">
+<meta property="article:author" content="Steve Zhang">
+<meta property="article:tag" content="Spring">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/11/05/BRYbOU.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/%E5%A4%B4%E5%83%8F.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Steve Zhang</h5>
+          <a href="mailto:18764665609@163.com" title="18764665609@163.com" class="mail">18764665609@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/chyucoding/chyucoding.github.io" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/5996289902" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Spring面试题总结</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Spring面试题总结</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-10-19T14:10:26.000Z" itemprop="datePublished" class="page-time">
+  2020-10-19
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring面试题总结："><span class="post-toc-number">1.</span> <span class="post-toc-text">Spring面试题总结：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-什么是Spring框架？"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">1. 什么是Spring框架？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-列举几个重要的Spring模块？"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">2.列举几个重要的Spring模块？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-RestController-和-Controller注解的区别："><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">3.@RestController 和@Controller注解的区别：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-谈谈你对Spring-IOC-和Spring-AOP的理解？"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">4. 谈谈你对Spring IOC 和Spring AOP的理解？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#5-SpringAOP-和AspectJ-AOP-有什么区别？"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">5.SpringAOP 和AspectJ AOP 有什么区别？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#6-SpringBean的作用域有哪些？"><span class="post-toc-number">1.0.6.</span> <span class="post-toc-text">6. SpringBean的作用域有哪些？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#7-Spring-中单例的bean线程安全问题你有了解么？"><span class="post-toc-number">1.0.7.</span> <span class="post-toc-text">7. Spring 中单例的bean线程安全问题你有了解么？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#8-Component和-Bean-的区别："><span class="post-toc-number">1.0.8.</span> <span class="post-toc-text">8. @Component和@Bean 的区别：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#9-将一个类声明为Spring-的bean的注解有哪些？"><span class="post-toc-number">1.0.9.</span> <span class="post-toc-text">9. 将一个类声明为Spring 的bean的注解有哪些？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#10-Spring-中Bean的生命周期？"><span class="post-toc-number">1.0.10.</span> <span class="post-toc-text">10. Spring 中Bean的生命周期？</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Spring面试题总结"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Spring面试题总结</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-10-19 22:10:26" datetime="2020-10-19T14:10:26.000Z"  itemprop="datePublished">2020-10-19</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="Spring面试题总结："><a href="#Spring面试题总结：" class="headerlink" title="Spring面试题总结："></a>Spring面试题总结：</h3><h5 id="1-什么是Spring框架？"><a href="#1-什么是Spring框架？" class="headerlink" title="1. 什么是Spring框架？"></a>1. 什么是Spring框架？</h5><p>Spring（Spring FrameWork）是一种轻量级的开发框架，可以提高开发人员的开发效率以及系统的维护性，它是很多模块的集合，使用这些模块可以很方便的进行开发；</p>
+<p><strong>模块：</strong></p>
+<ul>
+<li>核心容器</li>
+<li>数据访问/集成</li>
+<li>WebkAOP（面向切面编程）</li>
+<li>工具</li>
+<li>消息</li>
+<li>测试模块</li>
+</ul>
+<h5 id="2-列举几个重要的Spring模块？"><a href="#2-列举几个重要的Spring模块？" class="headerlink" title="2.列举几个重要的Spring模块？"></a>2.列举几个重要的Spring模块？</h5><p><a href="https://imgchr.com/i/BRYbOU" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/05/BRYbOU.png" alt="Spring模块.png"></a></p>
+<ul>
+<li>Spring Core： 基础模块，Spring其他所有的功能都要依赖此库。主要提供IOC依赖注入的功能；</li>
+<li>Spring Aspects:  :与AspectJ的集成提供支持；</li>
+<li>Spring AOP: 实现面向切面编程；</li>
+<li>Spring JDBC：Java数据库连接；</li>
+<li>Spring JMS：Java消息服务；</li>
+<li>Spring ORM：用于支持Hibernate 等ORM工具；</li>
+<li>Spring Web：为创建web应用程序提供支持；</li>
+<li>Spring Test：提供了对JUnit和TestNG测试的支持；</li>
+</ul>
+<h5 id="3-RestController-和-Controller注解的区别："><a href="#3-RestController-和-Controller注解的区别：" class="headerlink" title="3.@RestController 和@Controller注解的区别："></a>3.@RestController 和@Controller注解的区别：</h5><ul>
+<li>单独使用@Controller注解而不加ResponseBody的情况下，会返回一个视图页面，属于比较传统的springMVC项目，对应于前后不分离的情况；</li>
+<li>使用@RestController注解返回的是一个Json或者 XML形式的数据，但是RestController注解返回的是一个对象，对象数据以Json或者XML形式写入HTTP响应中，属于目前比较常用的前后端分离开发；</li>
+<li>@Controller +@ResponseBody （通过转换器进行转换为相对应的格式）返回JSON 或 XML 形式数据；</li>
+</ul>
+<h5 id="4-谈谈你对Spring-IOC-和Spring-AOP的理解？"><a href="#4-谈谈你对Spring-IOC-和Spring-AOP的理解？" class="headerlink" title="4. 谈谈你对Spring IOC 和Spring AOP的理解？"></a>4. 谈谈你对Spring IOC 和Spring AOP的理解？</h5><p><strong>IOC</strong><br>IOC（控制反转）是一种设计思想，目的是将原本在程序中<strong>手动创建对象</strong>的工作交给Spring框架来管理；IOC容器是Spring容器实现IOC的载体，IOC实际上就是一个<strong>Map（key，value）</strong>，Map中存放各种对象；</p>
+<p>IOC就像一个工厂，当我们需要创建对象的时候，只需要进行配置XML配置文件或者注解（使用SpringBoot的时会使用注解进行配置，大大提高了开发效率）就行，不用考虑是怎么创建出来的对象；所以大大降低了开发难度、提高了项目的可维护性；</p>
+<p><strong>AOP</strong></p>
+<p>AOP( 面向切面编程)  可以有效减少系统的重复代码，降低模块之间的耦合度，有利于未来的代码扩展和可维护性；</p>
+<p>Spring AOP 是基于<strong>动态代理</strong>的，如果要代理的对象实现了<strong>某一个接口</strong>，那么SpringAOP会使用<strong>JDK Proxy **的方式进行创建代理对象；而对于没有实现接口的对象，此时SpringAOP会使用</strong>Cglib<strong>生成一个被代理对象的</strong>子类**进行代理；</p>
+<p>注意：可以使用AspectJ框架进行操作！</p>
+<p><a href="https://imgchr.com/i/Bhwk34" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/06/Bhwk34.png" alt="动态创建对象的两种方式.png"></a></p>
+<h5 id="5-SpringAOP-和AspectJ-AOP-有什么区别？"><a href="#5-SpringAOP-和AspectJ-AOP-有什么区别？" class="headerlink" title="5.SpringAOP 和AspectJ AOP 有什么区别？"></a>5.SpringAOP 和AspectJ AOP 有什么区别？</h5><ul>
+<li>前者属于运行时增强，后者属于编译时增强；</li>
+<li>前者是基于代理进行操作的，后者是基于字节码进行操作的</li>
+<li>前者效率较低 ，后者效率较高；</li>
+<li>如果是切面比较少的情况下，两者的差异不是很大，但是如果是漆面比较多的情况下，推荐使用AspectJ；</li>
+</ul>
+<h5 id="6-SpringBean的作用域有哪些？"><a href="#6-SpringBean的作用域有哪些？" class="headerlink" title="6. SpringBean的作用域有哪些？"></a>6. SpringBean的作用域有哪些？</h5><ul>
+<li>Singleton：唯一的bean实例，在Spring 中所有的bean默认都是单例的；</li>
+<li>prototype：每次请求都会创建一个新的bean实例；</li>
+<li>session：每次HTTP请求都会产生一个新的bean实例，该bean仅在当前Http session内有效；</li>
+<li>request：每次HTTP请求都会产生一个新的bean实例，该bean仅在当前Http request内有效；</li>
+<li>global-session： 全局session；</li>
+</ul>
+<h5 id="7-Spring-中单例的bean线程安全问题你有了解么？"><a href="#7-Spring-中单例的bean线程安全问题你有了解么？" class="headerlink" title="7. Spring 中单例的bean线程安全问题你有了解么？"></a>7. Spring 中单例的bean线程安全问题你有了解么？</h5><p>单例bean会存在线程安全问题，主要是因为多线程在操作同一个对象时，对<strong>当前对象的非静态成员变量的写操作</strong>会存在线程安全问题；</p>
+<p><strong>解决：</strong></p>
+<ul>
+<li>在bean中尽量少使用可变的成员变量（不太现实）；</li>
+<li>在类中定义一个ThreadLocal的成员变量，将可变的成员变量放在ThreadLocal中（推荐！）</li>
+</ul>
+<h5 id="8-Component和-Bean-的区别："><a href="#8-Component和-Bean-的区别：" class="headerlink" title="8. @Component和@Bean 的区别："></a>8. @Component和@Bean 的区别：</h5><ul>
+<li>前者的作用对象是类；后者的作用对象是方法；</li>
+<li>前者需要通过扫描类所在的路径将bean对象装配到Spring容器中，也可以使用@ComponentScan增加一个类扫描的路径；</li>
+<li>使用后者比前者的自定义更强，多数场景下需要使用后者进行注解;</li>
+</ul>
+<p><strong>使用@Bean注解：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> Class TestBean&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TransferService <span class="title">transferService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> TransferServiceImpl();</span><br><span class="line">	&#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上代码相当于XML配置文件:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">beans</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"transferService"</span> <span class="attr">class</span>=<span class="string">"com.acme.TransferServiceImpl"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="9-将一个类声明为Spring-的bean的注解有哪些？"><a href="#9-将一个类声明为Spring-的bean的注解有哪些？" class="headerlink" title="9. 将一个类声明为Spring 的bean的注解有哪些？"></a>9. 将一个类声明为Spring 的bean的注解有哪些？</h5><ul>
+<li>@AutoWired ：自动进行装配；</li>
+<li>@Component：如果不知道要标注的bean属于哪个层，可以使用此注解进行标注；</li>
+<li>@Service：业务层，主要涉及一些复杂的逻辑，需要用到Dao/Mapper层；</li>
+<li>@Controller：对应Spring MVC的控制层，接收用户请求并调用Service层返回数据给前端页面；</li>
+<li>@Repository： 对应数据库，需要使用到Dao/Mapper层；</li>
+</ul>
+<h5 id="10-Spring-中Bean的生命周期？"><a href="#10-Spring-中Bean的生命周期？" class="headerlink" title="10. Spring 中Bean的生命周期？"></a>10. Spring 中Bean的生命周期？</h5><p><a href="https://imgchr.com/i/BbFFW6" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/09/BbFFW6.png" alt="Spring bean 声明周期图示.png"></a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-11-11T09:15:02.663Z" itemprop="dateUpdated">2020-11-11 17:15:02</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" target="_blank" rel="external">https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://chyucoding.github.io">
+            <img src="/img/%E5%A4%B4%E5%83%8F.jpg" alt="Steve Zhang">
+            Steve Zhang
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/&title=《Spring面试题总结》 — Steve's Blog&pic=https://chyucoding.github.io/img/头像.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/&title=《Spring面试题总结》 — Steve's Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Spring面试题总结》 — Steve's Blog&url=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/&via=https://chyucoding.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">SpringMVC面试题总结</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/09/12/Shiro/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Shiro权限管理</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        蟹蟹小朋友~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.png" data-alipay="/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Steve Zhang &copy; 2019 - 2020</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">鲁ICP备2372700号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/&title=《Spring面试题总结》 — Steve's Blog&pic=https://chyucoding.github.io/img/头像.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/&title=《Spring面试题总结》 — Steve's Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Spring面试题总结》 — Steve's Blog&url=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/&via=https://chyucoding.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://chyucoding.github.io/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
