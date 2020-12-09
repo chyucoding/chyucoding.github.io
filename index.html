@@ -1,178 +1,196 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
 <head>
-    
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Steve Zhang">
+  <meta name="keywords" content="">
+  <title>Steve&#39;s Blog</title>
 
-    
-
-    
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
 
-    <meta charset="utf-8">
-    
-    
-    
-    
-    <title>Steve&#39;s Blog | Stay hungry，Stay foolish</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#d39f7a">
-    
-    
-    <meta name="keywords" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Steve&#39;s Blog">
-<meta property="og:url" content="https://chyucoding.github.io/index.html">
-<meta property="og:site_name" content="Steve&#39;s Blog">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Steve Zhang">
-<meta name="twitter:card" content="summary">
-    
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
-    <script>window.lazyScripts=[]</script>
+<!-- 主题依赖的图标库，不要自行修改 -->
 
-    <!-- custom head -->
-    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"chyucoding.github.io","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
-<body>
-    <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/%E5%A4%B4%E5%83%8F.jpg">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">Steve Zhang</h5>
-          <a href="mailto:18764665609@163.com" title="18764665609@163.com" class="mail">18764665609@163.com</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-            <li class="waves-block waves-effect active">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
                 Home
               </a>
             </li>
+          
         
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
                 Archives
               </a>
             </li>
+          
         
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
                 Tags
               </a>
             </li>
+          
         
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/chyucoding/chyucoding.github.io" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
               </a>
             </li>
+          
         
-            <li class="waves-block waves-effect">
-              <a href="https://weibo.com/u/5996289902" target="_blank" >
-                <i class="icon icon-lg icon-weibo"></i>
-                Weibo
-              </a>
-            </li>
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
         
       </ul>
     </div>
   </div>
-</aside>
+</nav>
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">Steve&#39;s Blog</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="An elegant Material-Design theme for Hexo">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
         </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
-        
+      </div>
     </div>
-</header>
-<header class="content-header index-header">
+  </header>
 
-    <div class="container fade-scale">
-        <h1 class="title">Steve&#39;s Blog</h1>
-        <h5 class="subtitle">
+  <main>
+    
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/06/11/JavaSE_IO%E6%B5%81/">IO流</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/06/11/JavaSE_IO%E6%B5%81/">
+          
+          
             
-                Stay hungry，Stay foolish
-            
-        </h5>
-    </div>
-
-    
-
-
-</header>
-
-<div class="container body-wrap">
-
-    <ul class="post-list">
-    
-        <li class="post-list-item fade">
-            <article id="post-JavaSE_IO流"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-06-11 21:03:00" datetime="2020-06-11T13:03:00.000Z"  itemprop="datePublished">2020-06-11</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/06/11/JavaSE_IO%E6%B5%81/">IO流</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        引言
+          
+          引言
 IO流，顾名思义，就是InputStream、OutputStream，是用来操作数据的一种形式；Java中的流一般位于Java.util包中
 
 目录1.IO流的概述字节流：顶级父类     InputStream    OutputStream
@@ -180,197 +198,185 @@ IO流，顾名思义，就是InputStream、OutputStream，是用来操作数据�
 顶级父类都是抽象类，不可以new对象，必须由子类实现；
 
 File类的使用
-表示...
-    
-
-        <a href="/2020/06/11/JavaSE_IO%E6%B5%81/" class="post-more waves-effect waves-button">
-            阅读全文...
+表示文件或
         </a>
-    </div>
-    
-    <div class="post-footer">
+      </p>
+
+      <div class="index-btm post-metas">
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">JavaSE基础知识</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Mybatis从入门到入坑"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-09-10 14:20:15" datetime="2020-09-10T06:20:15.000Z"  itemprop="datePublished">2020-09-10</time>
-
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-11 21:03" pubdate>
+              2020-06-11
+            </time>
+          </div>
         
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">JavaSE基础知识</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
-
-    </div>
-
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/09/10/Mybatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%91/">Mybatis从入门到入坑</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        Mybatis从入门到入坑1. 什么是Mybatis？Mybatis是一个优秀的==持久层框架==，封装了==JDBC==，使用起来肥肠之方便；
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/10/Mybatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%91/">Mybatis从入门到入坑</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/10/Mybatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%91/">
+          
+          
+            
+          
+          Mybatis从入门到入坑1. 什么是Mybatis？Mybatis是一个优秀的==持久层框架==，封装了==JDBC==，使用起来肥肠之方便；
 关键词：
 持久层（使用Mybatis访问Mapper层，相当于使用JDBC访问Dao层），
 持久化（可以永久存储，永不丢失，位置在磁盘中），
 ORM(Object-Relationl Mapping)对象关系映射
-2.Mybatis的优缺点：优点：...
-    
+2.Mybatis的优缺点：优点：
 
-        <a href="/2020/09/10/Mybatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%91/" class="post-more waves-effect waves-button">
-            阅读全文...
+S
         </a>
-    </div>
-    
-    <div class="post-footer">
+      </p>
+
+      <div class="index-btm post-metas">
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSM/" rel="tag">SSM</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Lambda表达式详解"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-06-09 00:38:40" datetime="2020-06-08T16:38:40.000Z"  itemprop="datePublished">2020-06-09</time>
-
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-10 14:20" pubdate>
+              2020-09-10
+            </time>
+          </div>
         
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SSM/">SSM</a>
+            
+              <a href="/tags/Mybatis/">Mybatis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
-
-    </div>
-
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/">Lambda表达式详解</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        Lambda简介Lambda 表达式是 JDK8 的一个新特性，可以取代大部分的匿名内部类，写出更优雅的 Java 代码，尤其在集合的遍历和其他集合操作中，可以极大地优化代码结构。
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/">Lambda表达式详解</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/">
+          
+          
+            
+          
+          Lambda简介Lambda 表达式是 JDK8 的一个新特性，可以取代大部分的匿名内部类，写出更优雅的 Java 代码，尤其在集合的遍历和其他集合操作中，可以极大地优化代码结构。
 JDK 也提供了大量的内置函数式接口供我们使用，使得 Lambda 表达式的运用更加方便、高效。
-对接口的要求虽然使用 Lambda 表达式可以对某些接口进行简单的实现，但并不是所有的接口都可以使用 Lambda...
-    
-
-        <a href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/" class="post-more waves-effect waves-button">
-            阅读全文...
+对接口的要求虽然使用 Lambda 表达式可以对某些接口进行简单的实现，但并不是所有的接口都可以使用 Lambda 表达
         </a>
-    </div>
-    
-    <div class="post-footer">
+      </p>
+
+      <div class="index-btm post-metas">
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">JavaSE基础知识</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Shiro"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-09-12 09:10:05" datetime="2020-09-12T01:10:05.000Z"  itemprop="datePublished">2020-09-12</time>
-
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-09 00:38" pubdate>
+              2020-06-09
+            </time>
+          </div>
         
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">JavaSE基础知识</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
-
-    </div>
-
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/09/12/Shiro/">Shiro权限管理</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        Shiro1. 什么是shiro?shiro是一个简单易用的安全框架；
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/12/Shiro/">Shiro权限管理</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/12/Shiro/">
+          
+          
+            
+          
+          Shiro1. 什么是shiro?shiro是一个简单易用的安全框架；
 主要应用： 认证（Authentication）、授权（Authorization）、加密（cryptography）、会话管理（Session Manager）
 2. shiro的架构（核心重点）
 
-    
-
-        <a href="/2020/09/12/Shiro/" class="post-more waves-effect waves-button">
-            阅读全文...
         </a>
-    </div>
-    
-    <div class="post-footer">
+      </p>
+
+      <div class="index-btm post-metas">
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shiro/" rel="tag">shiro</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-多线程与高并发"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-06-12 23:01:00" datetime="2020-06-12T15:01:00.000Z"  itemprop="datePublished">2020-06-12</time>
-
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-12 09:10" pubdate>
+              2020-09-12
+            </time>
+          </div>
         
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/shiro/">shiro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
-
-    </div>
-
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/">多线程与高并发</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        1.什么是线程
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/">多线程与高并发</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/">
+          
+          
+            
+          
+          1.什么是线程
 通俗讲，即一个程序里不同的执行路径
 2.创建线程的三种方式
 
@@ -383,52 +389,48 @@ sleep（Long mills）让给别的线程先运行，回到就绪状态
 yield（） 谦让退出，进入就绪状态（工程中基本不用）
 join（）  插队，强行进入线程
 4.线程的状态
-新建–&gt;就绪状态–&gt;运...
-    
-
-        <a href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/" class="post-more waves-effect waves-button">
-            阅读全文...
+新建–&gt;就绪状态–&gt;运行–&
         </a>
-    </div>
-    
-    <div class="post-footer">
+      </p>
+
+      <div class="index-btm post-metas">
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">JavaSE基础知识</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-集合"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-06-09 14:48:12" datetime="2020-06-09T06:48:12.705Z"  itemprop="datePublished">2020-06-09</time>
-
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-12 23:01" pubdate>
+              2020-06-12
+            </time>
+          </div>
         
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">JavaSE基础知识</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
-
-    </div>
-
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/06/09/%E9%9B%86%E5%90%88/">集合</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        目录1.集合的引入和ArrayList
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/06/09/%E9%9B%86%E5%90%88/">集合</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/06/09/%E9%9B%86%E5%90%88/">
+          
+          
+            
+          
+          目录1.集合的引入和ArrayList
 集合和数组的比较
 
 
@@ -451,52 +453,48 @@ join（）  插队，强行进入线程
 List的主要实现类
 
 List特征：有序，不唯一
-ArrayLis...
-    
-
-        <a href="/2020/06/09/%E9%9B%86%E5%90%88/" class="post-more waves-effect waves-button">
-            阅读全文...
+ArrayList：分
         </a>
-    </div>
-    
-    <div class="post-footer">
+      </p>
+
+      <div class="index-btm post-metas">
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">JavaSE基础知识</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-使用Ajax处理异步请求"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-07-15 20:15:20" datetime="2020-07-15T12:15:20.000Z"  itemprop="datePublished">2020-07-15</time>
-
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-09 14:48" pubdate>
+              2020-06-09
+            </time>
+          </div>
         
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">JavaSE基础知识</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
-
-    </div>
-
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/">使用Ajax处理异步请求</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        Ajax1、引入Ajax
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/">使用Ajax处理异步请求</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/">
+          
+          
+            
+          
+          Ajax1、引入Ajax
 问题1：C-S进行数据交互的流程：
 
 1.浏览器发起请求
@@ -510,52 +508,50 @@ ArrayLis...
 
 1.使用form进行验证；
 2.使用超链接；
-3.在js代码中使用window.l...
-    
-
-        <a href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/" class="post-more waves-effect waves-button">
-            阅读全文...
+3.在js代码中使用window.loca
         </a>
-    </div>
-    
-    <div class="post-footer">
+      </p>
+
+      <div class="index-btm post-metas">
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Spring面试题总结"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-10-19 22:10:26" datetime="2020-10-19T14:10:26.000Z"  itemprop="datePublished">2020-10-19</time>
-
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-15 20:15" pubdate>
+              2020-07-15
+            </time>
+          </div>
         
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Ajax/">Ajax</a>
+            
+              <a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
-
-    </div>
-
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">Spring面试题总结</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        Spring面试题总结：1. 什么是Spring框架？Spring（Spring FrameWork）是一种轻量级的开发框架，可以提高开发人员的开发效率以及系统的维护性，它是很多模块的集合，使用这些模块可以很方便的进行开发；
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">Spring面试题总结</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">
+          
+          
+            
+          
+          Spring面试题总结：1. 什么是Spring框架？Spring（Spring FrameWork）是一种轻量级的开发框架，可以提高开发人员的开发效率以及系统的维护性，它是很多模块的集合，使用这些模块可以很方便的进行开发；
 模块：
 
 核心容器
@@ -567,256 +563,283 @@ WebkAOP（面向切面编程）
 
 2.列举几个重要的Spring模块？
 
-Spring Core： 基础模块，...
-    
-
-        <a href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" class="post-more waves-effect waves-button">
-            阅读全文...
+Spring Core： 基础模块，Spr
         </a>
-    </div>
-    
-    <div class="post-footer">
+      </p>
+
+      <div class="index-btm post-metas">
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-SpringMVC面试题总结"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-10-21 19:05:10" datetime="2020-10-21T11:05:10.000Z"  itemprop="datePublished">2020-10-21</time>
-
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-19 22:10" pubdate>
+              2020-10-19
+            </time>
+          </div>
         
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Spring/">Spring</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
-
-    </div>
-
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">SpringMVC面试题总结</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        1. 谈一谈你对于SpringMVC的理解？Model1时代：
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">SpringMVC面试题总结</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">
+          
+          
+            
+          
+          1. 谈一谈你对于SpringMVC的理解？Model1时代：
 在此阶段，整个web应用几乎全都是用Jsp页面写成的，使用很少的Java Bean进行处理数据库的连接和访问等操作，此模式下Jsp既是控制层又是视图层，所以，此模式存在很多问题，比如：
 1） 将控制逻辑层和视图层混在一起，导致代码重用率极低；
 2）前端和后端相互依赖，难以进行测试笔并且开发效率极低；
 Model2时代：
-在此阶段...
-    
-
-        <a href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" class="post-more waves-effect waves-button">
-            阅读全文...
+在此阶段， 出
         </a>
-    </div>
-    
-    <div class="post-footer">
+      </p>
+
+      <div class="index-btm post-metas">
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringMVC/" rel="tag">SpringMVC</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-使用Java实现一个简单的二叉树"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-11-11 17:11:00" datetime="2020-11-11T09:11:00.000Z"  itemprop="datePublished">2020-11-11</time>
-
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-21 19:05" pubdate>
+              2020-10-21
+            </time>
+          </div>
         
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringMVC/">SpringMVC</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
-
-    </div>
-
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/11/11/%E4%BD%BF%E7%94%A8Java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/">使用Java实现一个简单（前序 中序 后序）二叉树</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        使用Java实现一个简单（前序 中序 后序）的二叉树步骤：
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/11/11/%E4%BD%BF%E7%94%A8Java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/">使用Java实现一个简单（前序 中序 后序）二叉树</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/11/11/%E4%BD%BF%E7%94%A8Java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/">
+          
+          
+            
+          
+          使用Java实现一个简单（前序 中序 后序）的二叉树步骤：
 创建一个空树类；
 创建一个根节点类；
 创建一个测试类；
 使用递归的思想进行遍历；
 
 代码实现：空树类：
-1234567891011121314151617181920212223242526272829303132333435/** * @author icoop * @date 2020/11/11 9:23 *//** * 创建...
-    
-
-        <a href="/2020/11/11/%E4%BD%BF%E7%94%A8Java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/" class="post-more waves-effect waves-button">
-            阅读全文...
+1234567891011121314151617181920212223242526272829303132333435/** * @author icoop * @date 2020/11/11 9:23 *//** * 创建一个空
         </a>
-    </div>
-    
-    <div class="post-footer">
+      </p>
+
+      <div class="index-btm post-metas">
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" rel="tag">数据结构和算法</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-    </ul>
-
-    
-<nav id="page-nav">
-    <div class="inner">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
-    </div>
-</nav>
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-11 17:11" pubdate>
+              2020-11-11
+            </time>
+          </div>
         
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-        <p>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
             
-            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a>.</span>
-        </p>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">数据结构和算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-    <div class="bottom">
-        <p><span>Steve Zhang &copy; 2019 - 2020</span>
-            <span>
-                
-                <a href="http://www.miitbeian.gov.cn/" target="_blank">鲁ICP备2372700号-1</a><br>
-                
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
-    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
 
 
 
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://chyucoding.github.io/&title=Steve's Blog&pic=https://chyucoding.github.io/img/头像.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chyucoding.github.io/&title=Steve's Blog&source=" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://chyucoding.github.io/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Steve's Blog&url=https://chyucoding.github.io/&via=https://chyucoding.github.io" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://chyucoding.github.io/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://chyucoding.github.io/" alt="微信分享二维码">
-</div>
-
-
-
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
-
-
-</script>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+  
 
 
 
 
 
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
 
 
 
