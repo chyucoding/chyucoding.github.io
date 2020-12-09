@@ -1,146 +1,234 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <title>Linux操作系统 | 小张同学的技术分享</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-    <meta name="keywords" content="df" />
-  
-  <meta name="description" content="Linux1. 为什么选择Liunx 作为操作系统？开源免费 相比于windows更加安全 更加稳定 据说十年可以不关机依旧流畅运行； 2. Liunx常用命令： cd 进入某一个目录 cd ~进入用户目录 cd &#x2F; 进入磁盘根目录 cd .. 返回上一级   pwd 显示当前所在路径的根路径 clear 清屏 ls 以平铺的方式显示当前目录所包含的内容 ll 以列表的形式显示当前目录所包含的内容">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Linux操作系统">
-<meta property="og:url" content="https://chyucoding.github.io/2020/07/05/Liunx%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html">
-<meta property="og:site_name" content="小张同学的技术分享">
-<meta property="og:description" content="Linux1. 为什么选择Liunx 作为操作系统？开源免费 相比于windows更加安全 更加稳定 据说十年可以不关机依旧流畅运行； 2. Liunx常用命令： cd 进入某一个目录 cd ~进入用户目录 cd &#x2F; 进入磁盘根目录 cd .. 返回上一级   pwd 显示当前所在路径的根路径 clear 清屏 ls 以平铺的方式显示当前目录所包含的内容 ll 以列表的形式显示当前目录所包含的内容">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-05T02:02:08.000Z">
-<meta property="article:modified_time" content="2020-12-02T09:19:07.737Z">
-<meta property="article:author" content="Steve Zhang">
-<meta property="article:tag" content="Linux">
-<meta name="twitter:card" content="summary">
-  
-  
-    <link rel="icon" href="images/favicon.ico">
-  
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  
-<link rel="stylesheet" href="/css/style.css">
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Steve Zhang">
+  <meta name="keywords" content="">
+  <title>Linux操作系统 - 小张同学的技术分享</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
-<script src="/js/pace.min.js"></script>
-
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
   
 
   
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
 
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"chyucoding.github.io","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"always","icon":"§"},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
+
 <body>
-  <div id="container">
-      <header id="header">
-    <div id="banner"></div>
-    <div id="header-outer">
-        <div id="header-menu" class="header-menu-pos animated">
-            <div class="header-menu-container">
-                <a href="/" class="left">
-                    <span class="site-title">Steve&#39;s Blog</span>
-                </a>
-                <nav id="header-menu-nav" class="right">
-                    
-                    <a  href="/">
-                        <i class="fa fa-home"></i>
-                        <span>首页</span>
-                    </a>
-                    
-                    <a  href="/archives">
-                        <i class="fa fa-archive"></i>
-                        <span>文档</span>
-                    </a>
-                    
-                    <a  href="/about">
-                        <i class="fa fa-user"></i>
-                        <span>关于我</span>
-                    </a>
-                    
-                </nav>
-                <a class="mobile-header-menu-button">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </div>
-        <div id="header-row">
-            <div id="logo">
-                <a href="/">
-                    <img src="/images/%E5%A4%B4%E5%83%8F.png" alt="logo">
-                </a>
-            </div>
-            <div class="header-info">
-                <div id="header-title">
-                    
-                    <h2>
-                        Steve&#39;s Blog
-                    </h2>
-                    
-                </div>
-                <div id="header-description">
-                    
-                    <h3>
-                        Stay hungry,Stay foolish
-                    </h3>
-                    
-                </div>
-            </div>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a title="github" target="_blank" href="https://github.com/chyucoding/chyucoding.github.io">
-                            <i class="fa fa-github fa-2x"></i></a>
-                    
-                        <a title="QQ" target="_blank" href="/images/QQ.jpg">
-                            <i class="fa fa-qq fa-2x"></i></a>
-                    
-                        <a title="微信" target="_blank" href="/images/%E5%BE%AE%E4%BF%A1.jpg">
-                            <i class="fa fa-weixin fa-2x"></i></a>
-                    
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
-      <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-Liunx操作系统" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Steve's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-  
-    <h1 class="post-title" itemprop="name">
-      Linux操作系统
-    </h1>
-    <div class="post-title-bar">
-      <ul>
           
-        <li>
-          <i class="fa fa-calendar"></i>  2020-07-05
-        </li>
-        <li>
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_value_page_pv"></span>
-        </li>
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                主页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
       </ul>
     </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/background.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Linux操作系统">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Steve Zhang
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-07-05 10:02" pubdate>
+        July 5, 2020 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      194 字
+    </span>
   
 
-          
-      </header>
+  
     
-    <div class="article-entry post-content" itemprop="articleBody">
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
       
+      
+      2
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
             
-            <h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><h5 id="1-为什么选择Liunx-作为操作系统？"><a href="#1-为什么选择Liunx-作为操作系统？" class="headerlink" title="1. 为什么选择Liunx 作为操作系统？"></a>1. 为什么选择Liunx 作为操作系统？</h5><p>开源免费</p>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Linux操作系统</h1>
+            
+            <div class="markdown-body">
+              <h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><h5 id="1-为什么选择Liunx-作为操作系统？"><a href="#1-为什么选择Liunx-作为操作系统？" class="headerlink" title="1. 为什么选择Liunx 作为操作系统？"></a>1. 为什么选择Liunx 作为操作系统？</h5><p>开源免费</p>
 <p>相比于windows更加安全 更加稳定 据说十年可以不关机依旧流畅运行；</p>
 <h5 id="2-Liunx常用命令："><a href="#2-Liunx常用命令：" class="headerlink" title="2. Liunx常用命令："></a>2. Liunx常用命令：</h5><ul>
 <li>cd 进入某一个目录<ul>
@@ -157,314 +245,266 @@
 <li>mkdir 新建一个空文件夹 语法：mkdir -p 路径：如果路径中包含了不存在的路径，则自动创建；</li>
 </ul>
 
-            <div class="post-copyright">
-    <div class="content">
-        <p>最后更新： 2020年12月02日 17:19</p>
-        <p>原始链接： <a class="post-url" href="/2020/07/05/Liunx%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="Linux操作系统">https://chyucoding.github.io/2020/07/05/Liunx%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</a></p>
-        <footer>
-            <a href="https://chyucoding.github.io">
-                <img src="/images/%E5%A4%B4%E5%83%8F.png" alt="Steve Zhang">
-                Steve Zhang
-            </a>
-        </footer>
-    </div>
-</div>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">使用Ajax处理异步请求</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/18/%E8%AF%A6%E8%A7%A3Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/">
+                        <span class="hidden-mobile">详解Java反射机制</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
 
-      
-        
             
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;">赏</a>
-</div>
-
-<div id="reward" class="post-modal reward-lay">
-    <a class="close" href="javascript:;" id="reward-close">×</a>
-    <span class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        感谢大家
-        <i class="icon icon-quote-right"></i>
-    </span>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/images/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.png" alt="打赏二维码">
+          </article>
         </div>
-        <div class="reward-select">
-            
-            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.png">
-                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
-            </label>
-            
-            
-            <label class="reward-select-item" data-id="alipay" data-alipay="/images/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98.jpg">
-                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
-            </label>
-            
-        </div>
-    </div>
-</div>
-
-
-        
-    </div>
-    <footer class="article-footer">
-        
-        
-<div class="post-share">
-    <a href="javascript:;" id="share-sub" class="post-share-fab">
-        <i class="fa fa-share-alt"></i>
-    </a>
-    <div class="post-share-list" id="share-list">
-        <ul class="share-icons">
-          <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://chyucoding.github.io/2020/07/05/Liunx%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/&title=《Linux操作系统》 — 小张同学的技术分享&pic=https://chyucoding.github.ioimages/头像.png" data-title="微博">
-              <i class="fa fa-weibo"></i>
-            </a>
-          </li>
-          <li>
-            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
-              <i class="fa fa-weixin"></i>
-            </a>
-          </li>
-          <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chyucoding.github.io/2020/07/05/Liunx%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/&title=《Linux操作系统》 — 小张同学的技术分享&source=" data-title="QQ">
-              <i class="fa fa-qq"></i>
-            </a>
-          </li>
-          <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://chyucoding.github.io/2020/07/05/Liunx%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" data-title="Facebook">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Linux操作系统》 — 小张同学的技术分享&url=https://chyucoding.github.io/2020/07/05/Liunx%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/&via=https://chyucoding.github.io" data-title="Twitter">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://chyucoding.github.io/2020/07/05/Liunx%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" data-title="Google+">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        </ul>
-     </div>
-</div>
-<div class="post-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;" id="wxShare-close">×</a>
-    <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://chyucoding.github.io/2020/07/05/Liunx%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" alt="微信分享二维码">
-</div>
-
-<div class="mask"></div>
-
-        
-        <ul class="article-footer-menu">
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/Linux/" class="color1">Linux</a>
-      
-  </li>
-
-        </ul>
-        
-    </footer>
-  </div>
-</article>
-
-
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Linux"><span class="post-toc-text">Linux</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-为什么选择Liunx-作为操作系统？"><span class="post-toc-text">1. 为什么选择Liunx 作为操作系统？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-Liunx常用命令："><span class="post-toc-text">2. Liunx常用命令：</span></a></li></ol></li></ol></li></ol>
-        </nav>
-    </aside>
-    
-
-<nav id="article-nav">
-  
-    <a href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          使用Ajax处理异步请求
-        
-      </span>
-    </a>
-  
-  
-    <a href="/2020/06/18/%E8%AF%A6%E8%A7%A3Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">详解Java反射机制</span>
-      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
-    </a>
-  
-</nav>
-
-
-
-    
-        <div id="SOHUCS" sid="Liunx操作系统" ></div>
-<script type="text/javascript">
-    (function(){
-        var appid = 'true';
-        var conf = 'true';
-        var width = window.innerWidth || document.documentElement.clientWidth;
-        if (width < 960) {
-            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-    
-</section>
-        
       </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
 
 
-      <p>
-        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
-        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
-      &copy; 2020 Steve Zhang<br>
-      </p>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
   </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        鲁ICP备2372700号-1
+      </a>
+    </span>
+    
+      
+        <span>
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=237270"
+            rel="nofollow noopener"
+            class="beian-police"
+            target="_blank"
+          >
+            
+              <span style="visibility: hidden; width: 0">|</span>
+              <img src="/img/police_beian.png" alt="police-icon"/>
+            
+            <span>鲁公网安备2372700号</span>
+          </a>
+        </span>
+      
+    
+  </div>
+
+
+  
 </footer>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script>
-  var mihoConfig = {
-      root: "https://chyucoding.github.io",
-      animate: true,
-      isHome: false,
-      share: true,
-      reward: 1
-  }
-</script>
-<div class="sidebar">
-    <div id="sidebar-search" title="Search">
-        <i class="fa fa-search"></i>
-    </div>
-    <div id="sidebar-category" title="Categories">
-        <i class="fa fa-book"></i>
-    </div>
-    <div id="sidebar-tag" title="Tags">
-        <i class="fa fa-tags"></i>
-    </div>
-    <div id="sidebar-top">
-        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
-    </div>
-</div>
-<div class="sidebar-menu-box" id="sidebar-menu-box">
-    <div class="sidebar-menu-box-container">
-        <div id="sidebar-menu-box-categories">
-            
-        </div>
-        <div id="sidebar-menu-box-tags">
-            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 20px;">JavaSE基础知识</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mybatis/" style="font-size: 10px;">Mybatis</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SSM/" style="font-size: 10px;">SSM</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringMVC/" style="font-size: 10px;">SpringMVC</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/shiro/" style="font-size: 10px;">shiro</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" style="font-size: 10px;">数据结构和算法</a>
-        </div>
-    </div>
-    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
-</div>
-<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
-    <div class="mobile-header-menu-container">
-        <span class="title">Menus</span>
-        <ul class="mobile-header-menu-navbar">
-            
-            <li>
-                <a  href="/">
-                    <i class="fa fa-home"></i><span>首页</span>
-                </a>
-            </li>
-            
-            <li>
-                <a  href="/archives">
-                    <i class="fa fa-archive"></i><span>文档</span>
-                </a>
-            </li>
-            
-            <li>
-                <a  href="/about">
-                    <i class="fa fa-user"></i><span>关于我</span>
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-    <div class="mobile-header-tag-container">
-        <span class="title">Tags</span>
-        <div id="mobile-header-container-tags">
-            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 20px;">JavaSE基础知识</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mybatis/" style="font-size: 10px;">Mybatis</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SSM/" style="font-size: 10px;">SSM</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringMVC/" style="font-size: 10px;">SpringMVC</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/shiro/" style="font-size: 10px;">shiro</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" style="font-size: 10px;">数据结构和算法</a>
-        </div>
-    </div>
-</div>
-<div class="search-wrap">
-    <span class="search-close">&times;</span>
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-            <i class="icon icon-lg icon-chevron-left"></i>
-        </a>
-        <input class="search-field" placeholder="Search..." id="keywords">
-        <a id="search-submit" href="javascript:;">
-            <i class="fa fa-search"></i>
-        </a>
-    <div class="search-container" id="search-container">
-        <ul class="search-result" id="search-result">
-        </ul>
-    </div>
-</div>
 
-<div id="search-tpl">
-    <li class="search-result-item">
-        <a href="{url}" class="search-item-li">
-            <span class="search-item-li-title" title="{title}">{title}</span>
-        </a>
-    </li>
-</div>
+<!-- SCRIPTS -->
 
-<script src="/js/search.js"></script>
-
-
-<script src="/js/main.js"></script>
-
-
-
-  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
-  <div id="particles"></div>
-  
-<script src="/js/particles.js"></script>
-
-
-
-
-
-
-
-
-  
-<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-
-  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
-  
-<script src="/js/animate.js"></script>
-
-
-
-  
-<script src="/js/pop-img.js"></script>
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
 
   <script>
-     $(".article-entry p img").popImg();
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
   </script>
 
-  </div>
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
 </body>
 </html>

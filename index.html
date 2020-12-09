@@ -1,378 +1,370 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Steve Zhang">
+  <meta name="keywords" content="">
   <title>小张同学的技术分享</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-    <meta name="keywords" content="df" />
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小张同学的技术分享">
-<meta property="og:url" content="https://chyucoding.github.io/index.html">
-<meta property="og:site_name" content="小张同学的技术分享">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Steve Zhang">
-<meta name="twitter:card" content="summary">
-  
-  
-    <link rel="icon" href="images/favicon.ico">
-  
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-<script src="/js/pace.min.js"></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
-  
 
-  
-  
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"chyucoding.github.io","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"always","icon":"§"},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
+
 <body>
-  <div id="container">
-      <header id="header">
-    <div id="banner"></div>
-    <div id="header-outer">
-        <div id="header-menu" class="header-menu-pos animated">
-            <div class="header-menu-container">
-                <a href="/" class="left">
-                    <span class="site-title">Steve&#39;s Blog</span>
-                </a>
-                <nav id="header-menu-nav" class="right">
-                    
-                    <a  href="/">
-                        <i class="fa fa-home"></i>
-                        <span>首页</span>
-                    </a>
-                    
-                    <a  href="/archives">
-                        <i class="fa fa-archive"></i>
-                        <span>文档</span>
-                    </a>
-                    
-                    <a  href="/about">
-                        <i class="fa fa-user"></i>
-                        <span>关于我</span>
-                    </a>
-                    
-                </nav>
-                <a class="mobile-header-menu-button">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </div>
-        <div id="header-row">
-            <div id="logo">
-                <a href="/">
-                    <img src="/images/%E5%A4%B4%E5%83%8F.png" alt="logo">
-                </a>
-            </div>
-            <div class="header-info">
-                <div id="header-title">
-                    
-                    <h2>
-                        Steve&#39;s Blog
-                    </h2>
-                    
-                </div>
-                <div id="header-description">
-                    
-                    <h3>
-                        Stay hungry,Stay foolish
-                    </h3>
-                    
-                </div>
-            </div>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a title="github" target="_blank" href="https://github.com/chyucoding/chyucoding.github.io">
-                            <i class="fa fa-github fa-2x"></i></a>
-                    
-                        <a title="QQ" target="_blank" href="/images/QQ.jpg">
-                            <i class="fa fa-qq fa-2x"></i></a>
-                    
-                        <a title="微信" target="_blank" href="/images/%E5%BE%AE%E4%BF%A1.jpg">
-                            <i class="fa fa-weixin fa-2x"></i></a>
-                    
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
-      <div class="outer">
-        <section id="main" class="body-wrap">
-  
-    <article id="post-JavaSE_IO流" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Steve's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/11/JavaSE_IO%E6%B5%81/"  >IO流</a>
-    </h1>
-  
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                主页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/background.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="我们不生产代码，我们只是代码的搬运工">
+              
+            </span>
+
+            
+          </div>
 
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2020/06/11/JavaSE_IO%E6%B5%81/" >
-                
-                <img src="https://chyucoding.github.io/images/高斯林Java.jpg" alt="IO流" title="IO流">
-                
-            </a>
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
         </div>
-        <div class="article-feed">
-            <p>
-                引言
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/06/11/JavaSE_IO%E6%B5%81/">IO流</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/06/11/JavaSE_IO%E6%B5%81/">
+          
+          
+            
+          
+          引言
 IO流，顾名思义，就是InputStream、OutputStream，是用来操作数据的一种形式；Java中的流一般位于Java.util包中
 
 目录1.IO流的概述字节流：顶级父类     InputStream    OutputStream
 字符流：顶级父类     Reader    Writer
 顶级父类都是抽象类，不可以new对象，必须由子类实现；
 
-F...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2020-06-11</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaSE基础知识/" class="color1">JavaSE基础知识</a>
-      
-  </li>
+File类的使用
+表示文件或
+        </a>
+      </p>
 
-        </ul>
+      <div class="index-btm post-metas">
         
-            <a href="/2020/06/11/JavaSE_IO%E6%B5%81/#more" class="article-more-link" >more&gt;&gt;</a>
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-11 21:03" pubdate>
+              2020-06-11
+            </time>
+          </div>
         
-    </footer>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">JavaSE基础知识</a>
+            
+          </div>
+        
+      </div>
+    </article>
   </div>
-</article>
 
-
-  
-    <article id="post-Mybatis从入门到入坑" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  <div class="row mx-auto index-card">
     
-      <header class="article-header">
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/10/Mybatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%91/"  >Mybatis从入门到入坑</a>
-    </h1>
-  
+        <a href="/2020/09/10/Mybatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%91/">Mybatis从入门到入坑</a>
+      </h1>
 
+      <p class="index-excerpt">
+        <a href="/2020/09/10/Mybatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%91/">
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2020/09/10/Mybatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%91/" >
-                
-                <img src="https://chyucoding.github.io/images/高斯林Java.jpg" alt="Mybatis从入门到入坑" title="Mybatis从入门到入坑">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                Mybatis从入门到入坑1. 什么是Mybatis？Mybatis是一个优秀的==持久层框架==，封装了==JDBC==，使用起来肥肠之方便；
+          
+            
+          
+          Mybatis从入门到入坑1. 什么是Mybatis？Mybatis是一个优秀的==持久层框架==，封装了==JDBC==，使用起来肥肠之方便；
 关键词：
 持久层（使用Mybatis访问Mapper层，相当于使用JDBC访问Dao层），
 持久化（可以永久存储，永不丢失，位置在磁盘中），
 ORM(Object-Relationl Mapping)对象关系映射
-2.Mybat...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2020-09-10</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/SSM/" class="color4">SSM</a>
-      
-    <a href="/tags/Mybatis/" class="color3">Mybatis</a>
-      
-  </li>
+2.Mybatis的优缺点：优点：
 
-        </ul>
+S
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
         
-            <a href="/2020/09/10/Mybatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%91/#more" class="article-more-link" >more&gt;&gt;</a>
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-10 14:20" pubdate>
+              2020-09-10
+            </time>
+          </div>
         
-    </footer>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SSM/">SSM</a>
+            
+              <a href="/tags/Mybatis/">Mybatis</a>
+            
+          </div>
+        
+      </div>
+    </article>
   </div>
-</article>
 
-
-  
-    <article id="post-Lambda表达式详解" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  <div class="row mx-auto index-card">
     
-      <header class="article-header">
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/"  >Lambda表达式详解</a>
-    </h1>
-  
+        <a href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/">Lambda表达式详解</a>
+      </h1>
 
+      <p class="index-excerpt">
+        <a href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/">
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/" >
-                
-                <img src="https://chyucoding.github.io/images/高斯林Java.jpg" alt="Lambda表达式详解" title="Lambda表达式详解">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                Lambda简介Lambda 表达式是 JDK8 的一个新特性，可以取代大部分的匿名内部类，写出更优雅的 Java 代码，尤其在集合的遍历和其他集合操作中，可以极大地优化代码结构。
+          
+            
+          
+          Lambda简介Lambda 表达式是 JDK8 的一个新特性，可以取代大部分的匿名内部类，写出更优雅的 Java 代码，尤其在集合的遍历和其他集合操作中，可以极大地优化代码结构。
 JDK 也提供了大量的内置函数式接口供我们使用，使得 Lambda 表达式的运用更加方便、高效。
-对接口的要求虽然使用 Lambda 表达式可以对某些接口进行简单的实现，但并不是所有的接口都可...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2020-06-09</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaSE基础知识/" class="color1">JavaSE基础知识</a>
-      
-  </li>
+对接口的要求虽然使用 Lambda 表达式可以对某些接口进行简单的实现，但并不是所有的接口都可以使用 Lambda 表达
+        </a>
+      </p>
 
-        </ul>
+      <div class="index-btm post-metas">
         
-            <a href="/2020/06/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%A6%E8%A7%A3/#more" class="article-more-link" >more&gt;&gt;</a>
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-09 00:38" pubdate>
+              2020-06-09
+            </time>
+          </div>
         
-    </footer>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">JavaSE基础知识</a>
+            
+          </div>
+        
+      </div>
+    </article>
   </div>
-</article>
 
-
-  
-    <article id="post-Shiro" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  <div class="row mx-auto index-card">
     
-      <header class="article-header">
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/12/Shiro/"  >Shiro权限管理</a>
-    </h1>
-  
+        <a href="/2020/09/12/Shiro/">Shiro权限管理</a>
+      </h1>
 
+      <p class="index-excerpt">
+        <a href="/2020/09/12/Shiro/">
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2020/09/12/Shiro/" >
-                
-                <img src="https://chyucoding.github.io/images/高斯林Java.jpg" alt="Shiro权限管理" title="Shiro权限管理">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                Shiro1. 什么是shiro?shiro是一个简单易用的安全框架；
+          
+            
+          
+          Shiro1. 什么是shiro?shiro是一个简单易用的安全框架；
 主要应用： 认证（Authentication）、授权（Authorization）、加密（cryptography）、会话管理（Session Manager）
 2. shiro的架构（核心重点）
 
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2020-09-12</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/shiro/" class="color1">shiro</a>
-      
-  </li>
+        </a>
+      </p>
 
-        </ul>
+      <div class="index-btm post-metas">
         
-            <a href="/2020/09/12/Shiro/#more" class="article-more-link" >more&gt;&gt;</a>
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-12 09:10" pubdate>
+              2020-09-12
+            </time>
+          </div>
         
-    </footer>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/shiro/">shiro</a>
+            
+          </div>
+        
+      </div>
+    </article>
   </div>
-</article>
 
-
-  
-    <article id="post-多线程与高并发" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  <div class="row mx-auto index-card">
     
-      <header class="article-header">
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/"  >多线程与高并发</a>
-    </h1>
-  
+        <a href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/">多线程与高并发</a>
+      </h1>
 
+      <p class="index-excerpt">
+        <a href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/">
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/" >
-                
-                <img src="https://chyucoding.github.io/images/高斯林Java.jpg" alt="多线程与高并发" title="多线程与高并发">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                1.什么是线程
+          
+            
+          
+          1.什么是线程
 通俗讲，即一个程序里不同的执行路径
 2.创建线程的三种方式
 
@@ -385,62 +377,48 @@ sleep（Long mills）让给别的线程先运行，回到就绪状态
 yield（） 谦让退出，进入就绪状态（工程中基本不用）
 join（）  插队，强行进入线程
 4.线程的状态
-新建–&gt;...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2020-06-12</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaSE基础知识/" class="color1">JavaSE基础知识</a>
-      
-  </li>
+新建–&gt;就绪状态–&gt;运行–&
+        </a>
+      </p>
 
-        </ul>
+      <div class="index-btm post-metas">
         
-            <a href="/2020/06/12/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8E%E9%AB%98%E5%B9%B6%E5%8F%91/#more" class="article-more-link" >more&gt;&gt;</a>
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-12 23:01" pubdate>
+              2020-06-12
+            </time>
+          </div>
         
-    </footer>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">JavaSE基础知识</a>
+            
+          </div>
+        
+      </div>
+    </article>
   </div>
-</article>
 
-
-  
-    <article id="post-集合" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  <div class="row mx-auto index-card">
     
-      <header class="article-header">
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/09/%E9%9B%86%E5%90%88/"  >集合</a>
-    </h1>
-  
+        <a href="/2020/06/09/%E9%9B%86%E5%90%88/">集合</a>
+      </h1>
 
+      <p class="index-excerpt">
+        <a href="/2020/06/09/%E9%9B%86%E5%90%88/">
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2020/06/09/%E9%9B%86%E5%90%88/" >
-                
-                <img src="https://chyucoding.github.io/images/高斯林Java.jpg" alt="集合" title="集合">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                目录1.集合的引入和ArrayList
+          
+            
+          
+          目录1.集合的引入和ArrayList
 集合和数组的比较
 
 
@@ -462,62 +440,49 @@ join（）  插队，强行进入线程
 
 List的主要实现类
 
-List特征：有序，不唯...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2020-06-09</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaSE基础知识/" class="color1">JavaSE基础知识</a>
-      
-  </li>
+List特征：有序，不唯一
+ArrayList：分
+        </a>
+      </p>
 
-        </ul>
+      <div class="index-btm post-metas">
         
-            <a href="/2020/06/09/%E9%9B%86%E5%90%88/#more" class="article-more-link" >more&gt;&gt;</a>
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-09 14:48" pubdate>
+              2020-06-09
+            </time>
+          </div>
         
-    </footer>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">JavaSE基础知识</a>
+            
+          </div>
+        
+      </div>
+    </article>
   </div>
-</article>
 
-
-  
-    <article id="post-使用Ajax处理异步请求" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  <div class="row mx-auto index-card">
     
-      <header class="article-header">
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/"  >使用Ajax处理异步请求</a>
-    </h1>
-  
+        <a href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/">使用Ajax处理异步请求</a>
+      </h1>
 
+      <p class="index-excerpt">
+        <a href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/">
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/" >
-                
-                <img src="https://chyucoding.github.io/images/高斯林Java.jpg" alt="使用Ajax处理异步请求" title="使用Ajax处理异步请求">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                Ajax1、引入Ajax
+          
+            
+          
+          Ajax1、引入Ajax
 问题1：C-S进行数据交互的流程：
 
 1.浏览器发起请求
@@ -531,64 +496,50 @@ List特征：有序，不唯...
 
 1.使用form进行验证；
 2.使用超链接；
-3.在js代码中...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2020-07-15</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/Ajax/" class="color5">Ajax</a>
-      
-    <a href="/tags/前端/" class="color3">前端</a>
-      
-  </li>
+3.在js代码中使用window.loca
+        </a>
+      </p>
 
-        </ul>
+      <div class="index-btm post-metas">
         
-            <a href="/2020/07/15/%E4%BD%BF%E7%94%A8Ajax%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/#more" class="article-more-link" >more&gt;&gt;</a>
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-15 20:15" pubdate>
+              2020-07-15
+            </time>
+          </div>
         
-    </footer>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Ajax/">Ajax</a>
+            
+              <a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+            
+          </div>
+        
+      </div>
+    </article>
   </div>
-</article>
 
-
-  
-    <article id="post-Spring面试题总结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  <div class="row mx-auto index-card">
     
-      <header class="article-header">
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/"  >Spring面试题总结</a>
-    </h1>
-  
+        <a href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">Spring面试题总结</a>
+      </h1>
 
+      <p class="index-excerpt">
+        <a href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" >
-                
-                <img src="https://chyucoding.github.io/images/高斯林Java.jpg" alt="Spring面试题总结" title="Spring面试题总结">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                Spring面试题总结：1. 什么是Spring框架？Spring（Spring FrameWork）是一种轻量级的开发框架，可以提高开发人员的开发效率以及系统的维护性，它是很多模块的集合，使用这些模块可以很方便的进行开发；
+          
+            
+          
+          Spring面试题总结：1. 什么是Spring框架？Spring（Spring FrameWork）是一种轻量级的开发框架，可以提高开发人员的开发效率以及系统的维护性，它是很多模块的集合，使用这些模块可以很方便的进行开发；
 模块：
 
 核心容器
@@ -600,306 +551,338 @@ WebkAOP（面向切面编程）
 
 2.列举几个重要的Spring模块？
 
-Spring C...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2020-10-19</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/Spring/" class="color2">Spring</a>
-      
-  </li>
+Spring Core： 基础模块，Spr
+        </a>
+      </p>
 
-        </ul>
+      <div class="index-btm post-metas">
         
-            <a href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/#more" class="article-more-link" >more&gt;&gt;</a>
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-19 22:10" pubdate>
+              2020-10-19
+            </time>
+          </div>
         
-    </footer>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Spring/">Spring</a>
+            
+          </div>
+        
+      </div>
+    </article>
   </div>
-</article>
 
-
-  
-    <article id="post-SpringMVC面试题总结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  <div class="row mx-auto index-card">
     
-      <header class="article-header">
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/"  >SpringMVC面试题总结</a>
-    </h1>
-  
+        <a href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">SpringMVC面试题总结</a>
+      </h1>
 
+      <p class="index-excerpt">
+        <a href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" >
-                
-                <img src="https://chyucoding.github.io/images/高斯林Java.jpg" alt="SpringMVC面试题总结" title="SpringMVC面试题总结">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                1. 谈一谈你对于SpringMVC的理解？Model1时代：
+          
+            
+          
+          1. 谈一谈你对于SpringMVC的理解？Model1时代：
 在此阶段，整个web应用几乎全都是用Jsp页面写成的，使用很少的Java Bean进行处理数据库的连接和访问等操作，此模式下Jsp既是控制层又是视图层，所以，此模式存在很多问题，比如：
 1） 将控制逻辑层和视图层混在一起，导致代码重用率极低；
 2）前端和后端相互依赖，难以进行测试笔并且开发效率极低；
-Mode...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2020-10-21</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/SpringMVC/" class="color5">SpringMVC</a>
-      
-  </li>
+Model2时代：
+在此阶段， 出
+        </a>
+      </p>
 
-        </ul>
+      <div class="index-btm post-metas">
         
-            <a href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/#more" class="article-more-link" >more&gt;&gt;</a>
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-21 19:05" pubdate>
+              2020-10-21
+            </time>
+          </div>
         
-    </footer>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/SpringMVC/">SpringMVC</a>
+            
+          </div>
+        
+      </div>
+    </article>
   </div>
-</article>
 
-
-  
-    <article id="post-使用Java实现一个简单的二叉树" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  <div class="row mx-auto index-card">
     
-      <header class="article-header">
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/11/%E4%BD%BF%E7%94%A8Java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/"  >使用Java实现一个简单（前序 中序 后序）二叉树</a>
-    </h1>
-  
+        <a href="/2020/11/11/%E4%BD%BF%E7%94%A8Java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/">使用Java实现一个简单（前序 中序 后序）二叉树</a>
+      </h1>
 
+      <p class="index-excerpt">
+        <a href="/2020/11/11/%E4%BD%BF%E7%94%A8Java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/">
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2020/11/11/%E4%BD%BF%E7%94%A8Java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/" >
-                
-                <img src="https://chyucoding.github.io/images/高斯林Java.jpg" alt="使用Java实现一个简单（前序 中序 后序）二叉树" title="使用Java实现一个简单（前序 中序 后序）二叉树">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                使用Java实现一个简单（前序 中序 后序）的二叉树步骤：
+          
+            
+          
+          使用Java实现一个简单（前序 中序 后序）的二叉树步骤：
 创建一个空树类；
 创建一个根节点类；
 创建一个测试类；
 使用递归的思想进行遍历；
 
 代码实现：空树类：
-1234567891011121314151617181920212223242526272829303132333435/** * @author icoop * @date 2020/11/11 9:23 ...
-            </p>
-        </div>
-      
+1234567891011121314151617181920212223242526272829303132333435/** * @author icoop * @date 2020/11/11 9:23 *//** * 创建一个空
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
         
-    </div>
-    <footer class="article-footer">
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-11 17:11" pubdate>
+              2020-11-11
+            </time>
+          </div>
         
-        <ul class="article-footer-menu">
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
             
-                <li><i class="fa fa-calendar"></i>2020-11-11</li>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">数据结构和算法</a>
             
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/数据结构和算法/" class="color3">数据结构和算法</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2020/11/11/%E4%BD%BF%E7%94%A8Java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/#more" class="article-more-link" >more&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &gt;&gt;</a>
-  </nav>
-</section>
+          </div>
         
       </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info" class="inner">
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
       
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-      <p>
-        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
-        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
-      &copy; 2020 Steve Zhang<br>
-      </p>
-    </div>
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
   </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        鲁ICP备2372700号-1
+      </a>
+    </span>
+    
+      
+        <span>
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=237270"
+            rel="nofollow noopener"
+            class="beian-police"
+            target="_blank"
+          >
+            
+              <span style="visibility: hidden; width: 0">|</span>
+              <img src="/img/police_beian.png" alt="police-icon"/>
+            
+            <span>鲁公网安备2372700号</span>
+          </a>
+        </span>
+      
+    
+  </div>
+
+
+  
 </footer>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script>
-  var mihoConfig = {
-      root: "https://chyucoding.github.io",
-      animate: true,
-      isHome: true,
-      share: true,
-      reward: 1
-  }
-</script>
-<div class="sidebar">
-    <div id="sidebar-search" title="Search">
-        <i class="fa fa-search"></i>
-    </div>
-    <div id="sidebar-category" title="Categories">
-        <i class="fa fa-book"></i>
-    </div>
-    <div id="sidebar-tag" title="Tags">
-        <i class="fa fa-tags"></i>
-    </div>
-    <div id="sidebar-top">
-        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
-    </div>
-</div>
-<div class="sidebar-menu-box" id="sidebar-menu-box">
-    <div class="sidebar-menu-box-container">
-        <div id="sidebar-menu-box-categories">
-            
-        </div>
-        <div id="sidebar-menu-box-tags">
-            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 20px;">JavaSE基础知识</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mybatis/" style="font-size: 10px;">Mybatis</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SSM/" style="font-size: 10px;">SSM</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringMVC/" style="font-size: 10px;">SpringMVC</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/shiro/" style="font-size: 10px;">shiro</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" style="font-size: 10px;">数据结构和算法</a>
-        </div>
-    </div>
-    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
-</div>
-<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
-    <div class="mobile-header-menu-container">
-        <span class="title">Menus</span>
-        <ul class="mobile-header-menu-navbar">
-            
-            <li>
-                <a  href="/">
-                    <i class="fa fa-home"></i><span>首页</span>
-                </a>
-            </li>
-            
-            <li>
-                <a  href="/archives">
-                    <i class="fa fa-archive"></i><span>文档</span>
-                </a>
-            </li>
-            
-            <li>
-                <a  href="/about">
-                    <i class="fa fa-user"></i><span>关于我</span>
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-    <div class="mobile-header-tag-container">
-        <span class="title">Tags</span>
-        <div id="mobile-header-container-tags">
-            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 20px;">JavaSE基础知识</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mybatis/" style="font-size: 10px;">Mybatis</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/SSM/" style="font-size: 10px;">SSM</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringMVC/" style="font-size: 10px;">SpringMVC</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/shiro/" style="font-size: 10px;">shiro</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" style="font-size: 10px;">数据结构和算法</a>
-        </div>
-    </div>
-</div>
-<div class="search-wrap">
-    <span class="search-close">&times;</span>
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-            <i class="icon icon-lg icon-chevron-left"></i>
-        </a>
-        <input class="search-field" placeholder="Search..." id="keywords">
-        <a id="search-submit" href="javascript:;">
-            <i class="fa fa-search"></i>
-        </a>
-    <div class="search-container" id="search-container">
-        <ul class="search-result" id="search-result">
-        </ul>
-    </div>
-</div>
 
-<div id="search-tpl">
-    <li class="search-result-item">
-        <a href="{url}" class="search-item-li">
-            <span class="search-item-li-title" title="{title}">{title}</span>
-        </a>
-    </li>
-</div>
+<!-- SCRIPTS -->
 
-<script src="/js/search.js"></script>
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
 
 
-<script src="/js/main.js"></script>
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
 
 
-
-  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
-  <div id="particles"></div>
   
-<script src="/js/particles.js"></script>
-
-
-
-
-
+    <script  src="/js/lazyload.js" ></script>
+  
 
 
 
   
-<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-
-  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
-  
-<script src="/js/animate.js"></script>
 
 
 
-  </div>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
 </body>
 </html>
