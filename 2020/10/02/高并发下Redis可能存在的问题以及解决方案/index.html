@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="Steve Zhang">
   <meta name="keywords" content="">
-  <title>Redis持久化策略 - 小张同学的技术分享</title>
+  <title>高并发下Redis可能存在的问题以及解决方案 - 小张同学的技术分享</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -150,7 +150,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Redis持久化策略">
+            <span class="h2" id="subtitle" title="高并发下Redis可能存在的问题以及解决方案">
               
             </span>
 
@@ -165,7 +165,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-10-02 05:25" pubdate>
+      <time datetime="2020-10-02 07:10" pubdate>
         October 2, 2020 am
       </time>
     </span>
@@ -177,7 +177,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      748 字
+      717 字
     </span>
   
 
@@ -187,7 +187,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      9
        分钟
     </span>
   
@@ -225,29 +225,31 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Redis持久化策略</h1>
+            <h1 style="display: none">高并发下Redis可能存在的问题以及解决方案</h1>
             
             <div class="markdown-body">
-              <h3 id="Redis的持久化策略（面试题）"><a href="#Redis的持久化策略（面试题）" class="headerlink" title="Redis的持久化策略（面试题）"></a>Redis的持久化策略（面试题）</h3><p>Redis不仅仅是一个内存型数据库，还具备持久化能力。</p>
-<p>Redis每次启动时都会从硬盘存储文件中把数据读取到内存中。运行过程中操作的数据都是内存中的数据</p>
-<p>一共包含两种持久化策略：RDB 和 AOF</p>
-<h3 id="1-RDB（Redis-DataBase）"><a href="#1-RDB（Redis-DataBase）" class="headerlink" title="1 RDB（Redis DataBase）"></a>1 RDB（Redis DataBase）</h3><p>rdb模式是默认模式，可以在指定的时间间隔内生成数据快照（snapshot），默认保存到dump.rdb文件中。当redis重启后会自动加载dump.rdb文件中内容到内存中。</p>
-<p>用户可以使用SAVE（同步）或BGSAVE（异步）手动保存数据。</p>
-<p>可以设置服务器配置的save选项，让服务器每隔一段时间自动执行一次BGSAVE命令，可以通过save选项设置多个保存条件，但只要其中任意一个条件被满足，服务器就会执行BGSAVE命令。<br>　　例如：<br>　　save 900 1<br>　　save 300 10<br>　　save 60 10000<br>　　那么只要满足以下三个条件中的任意一个，BGSAVE命令就会被执行。计时单位是必须要执行的时间，save 900 1 ，每900秒检测一次。在并发量越高的项目中Redis的时间参数设置的值要越小。<br>　　服务器在900秒之内，对数据库进行了至少1次修改<br>　　服务器在300秒之内，对数据库进行了至少10次修改<br>　　服务器在60秒之内，对数据库进行了至少10000次修改。</p>
-<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><p>rdb文件是一个紧凑文件，直接使用rdb文件就可以还原数据。</p>
-<p>数据保存会由一个子进程进行保存，不影响父进程做其他事情。</p>
-<p>恢复数据的效率要高于aof</p>
-<p>总结：性能要高于AOF</p>
-<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><p>每次保存点之间导致redis不可意料的关闭，可能会丢失数据。</p>
-<p>由于每次保存数据都需要fork()子进程，在数据量比较大时可能会比较耗费性能。</p>
-<h3 id="AOF（AppendOnly-File）"><a href="#AOF（AppendOnly-File）" class="headerlink" title="AOF（AppendOnly File）"></a>AOF（AppendOnly File）</h3><p>AOF默认是关闭的是 <strong>appendonly no</strong>，需要在配置文件redis.conf中开启AOF。Redis支持AOF和RDB同时生效，如果同时存在，AOF优先级高于RDB（Redis重新启动时会使用AOF进行数据恢复）</p>
-<p>AOF原理：监听执行的命令，如果发现执行了修改数据的操作，同时直接同步到数据库文件中，同时会把命令记录到日志中。即使突然出现问题，由于日志文件中已经记录命令，下一次启动时也可以按照日志进行恢复数据，由于内存数据和硬盘数据实时同步，即使出现意外情况也不需要担心。</p>
-<h4 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h4><p>相对RDB数据更加安全。</p>
-<h4 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h4><p>相同数据集AOF要大于RDB。</p>
-<p>相对RDB可能会慢一些。</p>
-<h4 id="开启方法"><a href="#开启方法" class="headerlink" title="开启方法"></a>开启方法</h4><p>修改redis.conf中。</p>
-<p>appendonly yes 开启aof</p>
-<p>appendfilename 设置aof数据文件，名称随意。</p>
+              <h3 id="高并发下Redis可能存在的问题及解决方案"><a href="#高并发下Redis可能存在的问题及解决方案" class="headerlink" title="高并发下Redis可能存在的问题及解决方案"></a>高并发下Redis可能存在的问题及解决方案</h3><h5 id="1-缓存穿透（面试问题）"><a href="#1-缓存穿透（面试问题）" class="headerlink" title="1. 缓存穿透（面试问题）"></a>1. 缓存穿透（面试问题）</h5><p>在实际开发中，添加缓存工具的目的，减少对数据库的访问次数，增加访问效率。</p>
+<p>肯定会出现Redis中不存在的缓存数据。例如：访问id=-1的数据。可能出现绕过redis依然频繁访问数据库的情况，称为缓存穿透，多出现在查询为null的情况不被缓存时。</p>
+<p>解决办法：</p>
+<p><strong>如果查询出来为null数据，把null数据依然放入到redis缓存中，同时设置这个key的有效时间比正常有效时间更短一些。</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">if</span>(list==<span class="hljs-keyword">null</span>)&#123;<br>    <span class="hljs-comment">// key value 有效时间 时间单位</span><br>    redisTemplate.opsForValue().set(navKey,<span class="hljs-keyword">null</span>,<span class="hljs-number">10</span>, TimeUnit.MINUTES);<br>&#125;<span class="hljs-keyword">else</span>&#123;<br>    redisTemplate.opsForValue().set(navKey,result,<span class="hljs-number">7</span>,TimeUnit.DAYS);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="2-缓存击穿（面试问题）"><a href="#2-缓存击穿（面试问题）" class="headerlink" title="2. 缓存击穿（面试问题）"></a>2. 缓存击穿（面试问题）</h5><p>实际开发中，考虑redis所在服务器中内存压力，都会设置key的有效时间。一定会出现键值对过期的情况。如果正好key过期了，此时出现大量并发访问，这些访问都会去访问数据库，这种情况称为缓存击穿。</p>
+<p>解决办法：</p>
+<p><strong>永久数据。加锁。防止出现数据库的并发访问。</strong> </p>
+<h5 id="2-1-ReentrantLock（重入锁）"><a href="#2-1-ReentrantLock（重入锁）" class="headerlink" title="2.1 ReentrantLock（重入锁）"></a>2.1 ReentrantLock（重入锁）</h5><p>JDK对于并发访问处理的内容都放入了java.util.concurrent中</p>
+<p>ReentrantLock性能和synchronized没有区别的，但是API使用起来更加方便。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@SpringBootTest</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTest</span> </span>&#123;<br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>&#123;<br>        <span class="hljs-keyword">new</span> Thread()&#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>                test2(<span class="hljs-string">"第一个线程111111"</span>);<br>            &#125;<br>        &#125;.start();<br><br>        <span class="hljs-keyword">new</span> Thread()&#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>                test2(<span class="hljs-string">"第二个线程222222"</span>);<br>            &#125;<br>        &#125;.start();<br><br>        <span class="hljs-keyword">try</span> &#123;<br>            Thread.sleep(<span class="hljs-number">20000</span>);<br>        &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>            e.printStackTrace();<br>        &#125;<br>    &#125;<br><br>    ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock();<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test2</span><span class="hljs-params">(String who)</span></span>&#123;<br>        lock.lock();<br>        <span class="hljs-keyword">if</span>(lock.isLocked()) &#123;<br>            System.out.println(<span class="hljs-string">"开始执行:"</span> + who);<br>            <span class="hljs-keyword">try</span> &#123;<br>                Thread.sleep(<span class="hljs-number">5000</span>);<br>            &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>                e.printStackTrace();<br>            &#125;<br>            System.out.println(<span class="hljs-string">"执行完:"</span> + who);<br>            lock.unlock();<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="2-2-解决缓存击穿实例代码"><a href="#2-2-解决缓存击穿实例代码" class="headerlink" title="2.2 解决缓存击穿实例代码"></a>2.2 解决缓存击穿实例代码</h5><p>只有在第一次访问时和Key过期时才会访问数据库。对于性能来说没有过大影响，因为平时都是直接访问redis。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock();<br><span class="hljs-meta">@Override</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> Item <span class="hljs-title">selectByid</span><span class="hljs-params">(Integer id)</span> </span>&#123;<br>    String key = <span class="hljs-string">"item:"</span>+id;<br>    <span class="hljs-keyword">if</span>(redisTemplate.hasKey(key))&#123;<br>        <span class="hljs-keyword">return</span> (Item) redisTemplate.opsForValue().get(key);<br>    &#125;<br>    lock.lock();<br>    <span class="hljs-keyword">if</span>(lock.isLocked()) &#123;<br>        Item item = itemDubboService.selectById(id);<br>        <span class="hljs-comment">// 由于设置了有效时间，就可能出现缓存击穿问题</span><br>        redisTemplate.opsForValue().set(key, item, <span class="hljs-number">7</span>, TimeUnit.DAYS);<br>        lock.unlock();<br>        <span class="hljs-keyword">return</span> item;<br>    &#125;<br>    <span class="hljs-comment">// 如果加锁失败，为了保护数据库，直接返回null</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="3-缓存雪崩（面试问题"><a href="#3-缓存雪崩（面试问题" class="headerlink" title="3. 缓存雪崩（面试问题)"></a>3. 缓存雪崩（面试问题)</h5><p>在一段时间内，出现大量缓存数据失效，这段时间内数据库的访问频率骤增，这种情况称为缓存雪崩。</p>
+<p>解决办法：</p>
+<p>永久生效。</p>
+<p>自定义算法，例如：随机有效时间。让所有key尽量避开同一时间段。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">int</span> seconds = random.nextInt(<span class="hljs-number">10000</span>);<br>redisTemplate.opsForValue().set(key, item, <span class="hljs-number">100</span>+ seconds, TimeUnit.SECONDS);<br></code></pre></td></tr></table></figure>
+
 
             </div>
             <hr>
@@ -271,9 +273,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/10/02/%E9%AB%98%E5%B9%B6%E5%8F%91%E4%B8%8BRedis%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+                      <a href="/2020/10/19/Spring%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">高并发下Redis可能存在的问题以及解决方案</span>
+                        <span class="hidden-mobile">Spring面试题总结</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -281,8 +283,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/09/12/Shiro/">
-                        <span class="hidden-mobile">Shiro权限管理</span>
+                      <a href="/2020/10/02/Redis%E6%8C%81%E4%B9%85%E5%8C%96%E7%AD%96%E7%95%A5/">
+                        <span class="hidden-mobile">Redis持久化策略</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
