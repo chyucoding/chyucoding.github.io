@@ -61,6 +61,25 @@
   
   
   <entry>
+    <title>关于Springboot+Dubbo启动时，连接Zookeeper时出现的问题：</title>
+    <link href="/2020/11/06/%E5%85%B3%E4%BA%8EZookeeper%20not%20connected%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <url>/2020/11/06/%E5%85%B3%E4%BA%8EZookeeper%20not%20connected%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    
+    <content type="html"><![CDATA[<h3 id="关于Springboot-Dubbo启动的时候一些问题，连接Zookeeper时出现的问题："><a href="#关于Springboot-Dubbo启动的时候一些问题，连接Zookeeper时出现的问题：" class="headerlink" title="关于Springboot+Dubbo启动的时候一些问题，连接Zookeeper时出现的问题："></a>关于Springboot+Dubbo启动的时候一些问题，连接Zookeeper时出现的问题：</h3><p> <strong>异常信息：</strong></p><p>java.lang.IllegalStateExpection:Zookeeper not connected</p><p><strong>解决方案：</strong></p><p>　　1、 检查zk所在机的防火墙。 systemctl stop firewalld | service firewalld stop（这里使用的是CentOS8镜像）<br>　　2、 检查zk所在机的ip和yml配置中的ip是否对应<br>　　3、 检查zk是否成功启动。 $zk_home/bin/zkServer.sh status -&gt; standalone<br>　　4、 在yml配置文件中增加新的配置，提高连接zk的访问超时时间。（有可能是虚拟机网络不稳定造成连接zk的时候，出现超时）。dubbo中的默认超时配置是3秒。<br>　　　　dubbo:<br>　　　　　　config-center:<br>　　　　　　　　timeout: 10000 # 单位是毫秒。<br>　　5、 在启动类型上增加新的注解， @EnableDubboConfig。 人为强制要求dubbo-spring-boot-starter扫描配置并加载。 dubbo是自动扫描配置并加载的。<br>　　6、 修改版本。降低spring-boot和dubbo-spring-boot-starter版本。（版本问题是win10操作系统对权限管理加强后，导致的结果。）<br>　　　　6.1、 先降低dubbo-spring-boot-starter 到 2.7.3 -&gt; 2.7.0<br>　　　　6.2、 再考虑降低spring-boot版本 到 2.2.0 -&gt; 2.1.10 -&gt; 2.0.2</p><p><strong>同时虚拟机的网络也是有一定的影响，如何提高虚拟机的网络稳定呢？</strong>　　</p><p>　　1、 关闭不必要的网卡<br>　　2、 关闭所有的热点软件<br>　　3、 关闭windows防火墙</p><p><strong>我遇到的问题：</strong></p><p>关闭防火墙！！！</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Zookeeper</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>SpringMVC面试题总结</title>
     <link href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/"/>
     <url>/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/</url>
