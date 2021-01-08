@@ -1,0 +1,565 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Steve Zhang">
+  <meta name="keywords" content="">
+  <title>Spring面试题总结 - 小张同学的技术分享</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"chyucoding.github.io","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"always","icon":"§"},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Steve's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                主页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/background.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Spring面试题总结">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Steve Zhang
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-19 22:10" pubdate>
+        October 19, 2020 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Spring面试题总结</h1>
+            
+            <div class="markdown-body">
+              <h3 id="Spring面试题总结："><a href="#Spring面试题总结：" class="headerlink" title="Spring面试题总结："></a>Spring面试题总结：</h3><h5 id="1-什么是Spring框架？"><a href="#1-什么是Spring框架？" class="headerlink" title="1. 什么是Spring框架？"></a>1. 什么是Spring框架？</h5><p>Spring（Spring FrameWork）是一种轻量级的开发框架，可以提高开发人员的开发效率以及系统的维护性，它是很多模块的集合，使用这些模块可以很方便的进行开发；</p>
+<p><strong>模块：</strong></p>
+<ul>
+<li>核心容器</li>
+<li>数据访问/集成</li>
+<li>WebkAOP（面向切面编程）</li>
+<li>工具</li>
+<li>消息</li>
+<li>测试模块</li>
+</ul>
+<h5 id="2-列举几个重要的Spring模块？"><a href="#2-列举几个重要的Spring模块？" class="headerlink" title="2.列举几个重要的Spring模块？"></a>2.列举几个重要的Spring模块？</h5><p><a href="https://imgchr.com/i/BRYbOU" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/05/BRYbOU.png" alt="Spring模块.png"></a></p>
+<ul>
+<li>Spring Core： 基础模块，Spring其他所有的功能都要依赖此库。主要提供IOC依赖注入的功能；</li>
+<li>Spring Aspects:  :与AspectJ的集成提供支持；</li>
+<li>Spring AOP: 实现面向切面编程；</li>
+<li>Spring JDBC：Java数据库连接；</li>
+<li>Spring JMS：Java消息服务；</li>
+<li>Spring ORM：用于支持Hibernate 等ORM工具；</li>
+<li>Spring Web：为创建web应用程序提供支持；</li>
+<li>Spring Test：提供了对JUnit和TestNG测试的支持；</li>
+</ul>
+<h5 id="3-RestController-和-Controller注解的区别："><a href="#3-RestController-和-Controller注解的区别：" class="headerlink" title="3.@RestController 和@Controller注解的区别："></a>3.@RestController 和@Controller注解的区别：</h5><ul>
+<li>单独使用@Controller注解而不加ResponseBody的情况下，会返回一个视图页面，属于比较传统的springMVC项目，对应于前后不分离的情况；</li>
+<li>使用@RestController注解返回的是一个Json或者 XML形式的数据，但是RestController注解返回的是一个对象，对象数据以Json或者XML形式写入HTTP响应中，属于目前比较常用的前后端分离开发；</li>
+<li>@Controller +@ResponseBody （通过转换器进行转换为相对应的格式）返回JSON 或 XML 形式数据；</li>
+</ul>
+<h5 id="4-谈谈你对Spring-IOC-和Spring-AOP的理解？"><a href="#4-谈谈你对Spring-IOC-和Spring-AOP的理解？" class="headerlink" title="4. 谈谈你对Spring IOC 和Spring AOP的理解？"></a>4. 谈谈你对Spring IOC 和Spring AOP的理解？</h5><p><strong>IOC</strong><br>IOC（控制反转）是一种设计思想，目的是将原本在程序中<strong>手动创建对象</strong>的工作交给Spring框架来管理；IOC容器是Spring容器实现IOC的载体，IOC实际上就是一个<strong>Map（key，value）</strong>，Map中存放各种对象；</p>
+<p>IOC就像一个工厂，当我们需要创建对象的时候，只需要进行配置XML配置文件或者注解（使用SpringBoot的时会使用注解进行配置，大大提高了开发效率）就行，不用考虑是怎么创建出来的对象；所以大大降低了开发难度、提高了项目的可维护性；</p>
+<p><strong>AOP</strong></p>
+<p>AOP( 面向切面编程)  可以有效减少系统的重复代码，降低模块之间的耦合度，有利于未来的代码扩展和可维护性；</p>
+<p>Spring AOP 是基于<strong>动态代理</strong>的，如果要代理的对象实现了<strong>某一个接口</strong>，那么SpringAOP会使用<strong>JDK Proxy **的方式进行创建代理对象；而对于没有实现接口的对象，此时SpringAOP会使用</strong>Cglib<strong>生成一个被代理对象的</strong>子类**进行代理；</p>
+<p>注意：可以使用AspectJ框架进行操作！</p>
+<p><a href="https://imgchr.com/i/Bhwk34" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/06/Bhwk34.png" alt="动态创建对象的两种方式.png"></a></p>
+<h5 id="5-SpringAOP-和AspectJ-AOP-有什么区别？"><a href="#5-SpringAOP-和AspectJ-AOP-有什么区别？" class="headerlink" title="5.SpringAOP 和AspectJ AOP 有什么区别？"></a>5.SpringAOP 和AspectJ AOP 有什么区别？</h5><ul>
+<li>前者属于运行时增强，后者属于编译时增强；</li>
+<li>前者是基于代理进行操作的，后者是基于字节码进行操作的</li>
+<li>前者效率较低 ，后者效率较高；</li>
+<li>如果是切面比较少的情况下，两者的差异不是很大，但是如果是漆面比较多的情况下，推荐使用AspectJ；</li>
+</ul>
+<h5 id="6-SpringBean的作用域有哪些？"><a href="#6-SpringBean的作用域有哪些？" class="headerlink" title="6. SpringBean的作用域有哪些？"></a>6. SpringBean的作用域有哪些？</h5><ul>
+<li>Singleton：唯一的bean实例，在Spring 中所有的bean默认都是单例的；</li>
+<li>prototype：每次请求都会创建一个新的bean实例；</li>
+<li>session：每次HTTP请求都会产生一个新的bean实例，该bean仅在当前Http session内有效；</li>
+<li>request：每次HTTP请求都会产生一个新的bean实例，该bean仅在当前Http request内有效；</li>
+<li>global-session： 全局session；</li>
+</ul>
+<h5 id="7-Spring-中单例的bean线程安全问题你有了解么？"><a href="#7-Spring-中单例的bean线程安全问题你有了解么？" class="headerlink" title="7. Spring 中单例的bean线程安全问题你有了解么？"></a>7. Spring 中单例的bean线程安全问题你有了解么？</h5><p>单例bean会存在线程安全问题，主要是因为多线程在操作同一个对象时，对<strong>当前对象的非静态成员变量的写操作</strong>会存在线程安全问题；</p>
+<p><strong>解决：</strong></p>
+<ul>
+<li>在bean中尽量少使用可变的成员变量（不太现实）；</li>
+<li>在类中定义一个ThreadLocal的成员变量，将可变的成员变量放在ThreadLocal中（推荐！）</li>
+</ul>
+<h5 id="8-Component和-Bean-的区别："><a href="#8-Component和-Bean-的区别：" class="headerlink" title="8. @Component和@Bean 的区别："></a>8. @Component和@Bean 的区别：</h5><ul>
+<li>前者的作用对象是类；后者的作用对象是方法；</li>
+<li>前者需要通过扫描类所在的路径将bean对象装配到Spring容器中，也可以使用@ComponentScan增加一个类扫描的路径；</li>
+<li>使用后者比前者的自定义更强，多数场景下需要使用后者进行注解;</li>
+</ul>
+<p><strong>使用@Bean注解：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Configuration</span><br><span class="hljs-keyword">public</span> Class TestBean&#123;<br>    <span class="hljs-meta">@Bean</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> TransferService <span class="hljs-title">transferService</span><span class="hljs-params">()</span> </span>&#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> TransferServiceImpl();<br>	&#125;   <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>以上代码相当于XML配置文件:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">beans</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"transferService"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"com.acme.TransferServiceImpl"</span>/&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="9-将一个类声明为Spring-的bean的注解有哪些？"><a href="#9-将一个类声明为Spring-的bean的注解有哪些？" class="headerlink" title="9. 将一个类声明为Spring 的bean的注解有哪些？"></a>9. 将一个类声明为Spring 的bean的注解有哪些？</h5><ul>
+<li>@AutoWired ：自动进行装配；</li>
+<li>@Component：如果不知道要标注的bean属于哪个层，可以使用此注解进行标注；</li>
+<li>@Service：业务层，主要涉及一些复杂的逻辑，需要用到Dao/Mapper层；</li>
+<li>@Controller：对应Spring MVC的控制层，接收用户请求并调用Service层返回数据给前端页面；</li>
+<li>@Repository： 对应数据库，需要使用到Dao/Mapper层；</li>
+</ul>
+<h5 id="10-Spring-中Bean的生命周期？"><a href="#10-Spring-中Bean的生命周期？" class="headerlink" title="10. Spring 中Bean的生命周期？"></a>10. Spring 中Bean的生命周期？</h5><p><a href="https://imgchr.com/i/BbFFW6" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/09/BbFFW6.png" alt="Spring bean 声明周期图示.png"></a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Spring/">Spring</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/21/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">SpringMVC面试题总结</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/02/%E9%AB%98%E5%B9%B6%E5%8F%91%E4%B8%8BRedis%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+                        <span class="hidden-mobile">高并发下Redis可能存在的问题以及解决方案</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        鲁ICP备2372700号-1
+      </a>
+    </span>
+    
+      
+        <span>
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=237270"
+            rel="nofollow noopener"
+            class="beian-police"
+            target="_blank"
+          >
+            
+              <span style="visibility: hidden; width: 0">|</span>
+              <img src="/img/police_beian.png" alt="police-icon"/>
+            
+            <span>鲁公网安备2372700号</span>
+          </a>
+        </span>
+      
+    
+  </div>
+
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
